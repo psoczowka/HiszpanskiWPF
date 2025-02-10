@@ -1,0 +1,121 @@
+{
+  "chapters": [
+    {
+      "title": "Podstawy",
+      "lessons": [
+        {
+          "title": "Dni tygodnia",
+          "words": [
+            {
+              "spanish": "Lunes",
+              "polish": "Poniedziałek"
+            },
+            {
+              "spanish": "Martes",
+              "polish": "Wtorek"
+            },
+            {
+              "spanish": "Miércoles",
+              "polish": "Środa"
+            },
+            {
+              "spanish": "Jueves",
+              "polish": "Czwartek"
+            },
+            {
+              "spanish": "Viernes",
+              "polish": "Piątek"
+            },
+            {
+              "spanish": "Sábado",
+              "polish": "Sobota"
+            },
+            {
+              "spanish": "Domingo",
+              "polish": "Niedziela"
+            }
+          ]
+        },
+        {
+          "title": "Miesiące",
+          "words": [
+            {
+              "spanish": "Enero",
+              "polish": "Styczeń"
+            },
+            {
+              "spanish": "Febrero",
+              "polish": "Luty"
+            },
+            {
+              "spanish": "Marzo",
+              "polish": "Marzec"
+            },
+            {
+              "spanish": "Abril",
+              "polish": "Kwiecień"
+            },
+            {
+              "spanish": "Mayo",
+              "polish": "Maj"
+            },
+            {
+              "spanish": "Junio",
+              "polish": "Czerwiec"
+            },
+            {
+              "spanish": "Julio",
+              "polish": "Lipiec"
+            },
+            {
+              "spanish": "Agosto",
+              "polish": "Sierpień"
+            },
+            {
+              "spanish": "Septiembre",
+              "polish": "Wrzesień"
+            },
+            {
+              "spanish": "Octubre",
+              "polish": "Październik"
+            },
+            {
+              "spanish": "Noviembre",
+              "polish": "Listopad"
+            },
+            {
+              "spanish": "Diciembre",
+              "polish": "Grudzień"
+            }
+          ]
+        },
+        {
+          "title": "Powitania",
+          "words": [
+            {
+              "spanish": "Hola",
+              "polish": "Cześć"
+            },
+            {
+              "spanish": "Buenos días",
+              "polish": "Dzień dobry"
+            },
+            {
+              "spanish": "Buenas noches",
+              "polish": "Dobry wieczór"
+            },
+            {
+              "spanish": "Adiós",
+              "polish": "Do widzenia"
+            },
+            {
+              "spanish": "Hasta luego",
+              "polish": "Do zobaczenia"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
+
