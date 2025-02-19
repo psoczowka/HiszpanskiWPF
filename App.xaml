@@ -4,6 +4,6 @@
              xmlns:local="clr-namespace:HiszpanskiWpf"
              StartupUri="MainWindow.xaml">
     <Application.Resources>
-         
+        <local:EnumToBooleanConverter x:Key="EnumToBooleanConverter"/>
     </Application.Resources>
 </Application>
