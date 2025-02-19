@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel; // Potrzebne do powiadamiania UI
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -11,16 +12,74 @@ namespace HiszpanskiWpf
         public List<Chapter> Chapters { get; set; }
     }
 
-    public class Chapter
+    public class Chapter : INotifyPropertyChanged
     {
         public string Title { get; set; }
         public List<Lesson> Lessons { get; set; }
+
+        private bool _isSelected;
+        public bool IsSelected
+        {
+            get => _isSelected;
+            set
+            {
+                _isSelected = value;
+                OnPropertyChanged(nameof(IsSelected));
+
+                // Jeśli użytkownik zaznacza rozdział, zaznaczamy też wszystkie lekcje
+                if (Lessons != null)
+                {
+                    foreach (var lesson in Lessons)
+                    {
+                        lesson.IsSelected = value;
+                    }
+                }
+            }
+        }
+
+        public void UpdateSelection()
+        {
+            if (Lessons != null)
+            {
+                // Jeśli wszystkie lekcje są zaznaczone, oznaczamy także rozdział
+                _isSelected = Lessons.All(l => l.IsSelected);
+                OnPropertyChanged(nameof(IsSelected));
+            }
+        }
+
+        public event PropertyChangedEventHandler PropertyChanged;
+        protected void OnPropertyChanged(string propertyName)
+        {
+            PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));
+        }
     }
 
-    public class Lesson
+
+    public class Lesson : INotifyPropertyChanged
     {
         public string Title { get; set; }
         public List<Word> Words { get; set; }
+
+        private bool _isSelected;
+        public bool IsSelected
+        {
+            get => _isSelected;
+            set
+            {
+                _isSelected = value;
+                OnPropertyChanged(nameof(IsSelected));
+
+                // Znajdź rozdział, do którego należy ta lekcja i zaktualizuj jego zaznaczenie
+                var parentChapter = MainViewModel.Instance?.Chapters.FirstOrDefault(ch => ch.Lessons.Contains(this));
+                parentChapter?.UpdateSelection();
+            }
+        }
+
+        public event PropertyChangedEventHandler PropertyChanged;
+        protected void OnPropertyChanged(string propertyName)
+        {
+            PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));
+        }
     }
 
     public class Word

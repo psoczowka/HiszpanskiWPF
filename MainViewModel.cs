@@ -8,11 +8,25 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows;
+using System.Windows.Input;
 
 namespace HiszpanskiWpf
 {
     public class MainViewModel : INotifyPropertyChanged
     {
+        public static MainViewModel Instance { get; private set; }
+
+        public MainViewModel()
+        {
+            Instance = this; // Umożliwia dostęp do `Chapters` w `Lesson`
+            LoadData();
+        }
+
+        public List<Lesson> SelectedLessons => Chapters
+            .SelectMany(ch => ch.Lessons)
+            .Where(l => l.IsSelected)
+            .ToList();
+
         private ObservableCollection<Chapter> _chapters;
         public ObservableCollection<Chapter> Chapters
         {
@@ -22,11 +36,6 @@ namespace HiszpanskiWpf
                 _chapters = value;
                 OnPropertyChanged(nameof(Chapters));
             }
-        }
-
-        public MainViewModel()
-        {
-            LoadData();
         }
 
         private void LoadData()
@@ -49,5 +58,7 @@ namespace HiszpanskiWpf
             PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));
         }
     }
+
+
 
 }
