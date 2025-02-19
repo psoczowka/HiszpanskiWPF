@@ -19,19 +19,16 @@ namespace HiszpanskiWpf
         public MainWindow()
         {
             InitializeComponent();
-            LoadChapters();
+            DataContext = new MainViewModel();
         }
-        private void LoadChapters()
+
+        private void TreeView_SelectedItemChanged(object sender, RoutedPropertyChangedEventArgs<object> e)
         {
-            try
+            if (e.NewValue is Lesson selectedLesson)
             {
-                var data = DataLoader.LoadData("data.json");
-                ChapterList.ItemsSource = data.Chapters;
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show($"Błąd wczytywania danych: {ex.Message}", "Błąd", MessageBoxButton.OK, MessageBoxImage.Error);
+                Console.WriteLine($"Wybrano lekcję: {selectedLesson.Title}");
             }
         }
+
     }
 }

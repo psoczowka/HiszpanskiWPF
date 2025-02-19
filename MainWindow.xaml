@@ -5,14 +5,29 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:HiszpanskiWpf"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
+        Title="Hiszpański WPF" Height="450" Width="800">
     <Grid>
-        <ListView Name="ChapterList" Margin="10">
-            <ListView.ItemTemplate>
-                <DataTemplate>
-                    <TextBlock Text="{Binding Title}" FontSize="16"/>
-                </DataTemplate>
-            </ListView.ItemTemplate>
-        </ListView>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="200"/>
+            <!-- Lewy panel na rozdziały i lekcje -->
+            <ColumnDefinition Width="*"/>
+            <!-- Środkowy panel (na razie pusty) -->
+        </Grid.ColumnDefinitions>
+
+        <!-- TreeView: Rozdziały i Lekcje (LEWY PANEL) -->
+        <TreeView Grid.Column="0"
+                  ItemsSource="{Binding Chapters}"
+                  SelectedItemChanged="TreeView_SelectedItemChanged">
+            <TreeView.ItemTemplate>
+                <HierarchicalDataTemplate ItemsSource="{Binding Lessons}">
+                    <TextBlock Text="{Binding Title}" FontSize="14"/>
+                </HierarchicalDataTemplate>
+            </TreeView.ItemTemplate>
+        </TreeView>
+
+        <!-- Na razie środkowy panel jest pusty -->
+        <TextBlock Grid.Column="1" Text="Wybierz lekcję, aby zobaczyć jej treść" 
+                   HorizontalAlignment="Center" VerticalAlignment="Center"
+                   FontSize="16" FontWeight="Bold"/>
     </Grid>
 </Window>

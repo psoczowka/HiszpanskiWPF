@@ -6,16 +6,9 @@ using System.Threading.Tasks;
 
 namespace HiszpanskiWpf
 {
-    public class Word
+    public class LanguageData
     {
-        public string Spanish { get; set; }
-        public string Polish { get; set; }
-    }
-
-    public class Lesson
-    {
-        public string Title { get; set; }
-        public List<Word> Words { get; set; }
+        public List<Chapter> Chapters { get; set; }
     }
 
     public class Chapter
@@ -24,8 +17,15 @@ namespace HiszpanskiWpf
         public List<Lesson> Lessons { get; set; }
     }
 
-    public class LanguageData
+    public class Lesson
     {
-        public List<Chapter> Chapters { get; set; }
+        public string Title { get; set; }
+        public List<Word> Words { get; set; }
+    }
+
+    public class Word
+    {
+        public string Spanish { get; set; }
+        public string Polish { get; set; }
     }
 }
