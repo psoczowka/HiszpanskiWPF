@@ -4,6 +4,153 @@
       "title": "Podstawy",
       "lessons": [
         {
+          "title": "Powitania",
+          "words": [
+            {
+              "spanish": "Hola",
+              "polish": "Cześć"
+            },
+            {
+              "spanish": "Buenos días",
+              "polish": "Dzień dobry"
+            },
+            {
+              "spanish": "Buenas noches",
+              "polish": "Dobry wieczór"
+            },
+            {
+              "spanish": "Adiós",
+              "polish": "Do widzenia"
+            },
+            {
+              "spanish": "Hasta luego",
+              "polish": "Do zobaczenia"
+            }
+          ]
+        },
+        {
+          "title": "Liczby od 1 do 20",
+          "words": [
+            {
+              "spanish": "Uno",
+              "polish": "Jeden"
+            },
+            {
+              "spanish": "Dos",
+              "polish": "Dwa"
+            },
+            {
+              "spanish": "Tres",
+              "polish": "Trzy"
+            },
+            {
+              "spanish": "Cuatro",
+              "polish": "Cztery"
+            },
+            {
+              "spanish": "Cinco",
+              "polish": "Pięć"
+            },
+            {
+              "spanish": "Seis",
+              "polish": "Sześć"
+            },
+            {
+              "spanish": "Siete",
+              "polish": "Siedem"
+            },
+            {
+              "spanish": "Ocho",
+              "polish": "Osiem"
+            },
+            {
+              "spanish": "Nueve",
+              "polish": "Dziewięć"
+            },
+            {
+              "spanish": "Diez",
+              "polish": "Dziesięć"
+            },
+            {
+              "spanish": "Once",
+              "polish": "Jedenaście"
+            },
+            {
+              "spanish": "Doce",
+              "polish": "Dwanaście"
+            },
+            {
+              "spanish": "Trece",
+              "polish": "Trzynaście"
+            },
+            {
+              "spanish": "Catorce",
+              "polish": "Czternaście"
+            },
+            {
+              "spanish": "Quince",
+              "polish": "Piętnaście"
+            },
+            {
+              "spanish": "Dieciséis",
+              "polish": "Szesnaście"
+            },
+            {
+              "spanish": "Diecisiete",
+              "polish": "Siedemnaście"
+            },
+            {
+              "spanish": "Dieciocho",
+              "polish": "Osiemnaście"
+            },
+            {
+              "spanish": "Diecinueve",
+              "polish": "Dziewiętnaście"
+            },
+            {
+              "spanish": "Veinte",
+              "polish": "Dwadzieścia"
+            }
+          ]
+        },
+        {
+          "title": "Liczby od 20 do 100",
+          "words": [
+            {
+              "spanish": "Treinta",
+              "polish": "Trzydzieści"
+            },
+            {
+              "spanish": "Cuarenta",
+              "polish": "Czterdzieści"
+            },
+            {
+              "spanish": "Cincuenta",
+              "polish": "Pięćdziesiąt"
+            },
+            {
+              "spanish": "Sesenta",
+              "polish": "Sześćdziesiąt"
+            },
+            {
+              "spanish": "Setenta",
+              "polish": "Siedemdziesiąt"
+            },
+            {
+              "spanish": "Ochenta",
+              "polish": "Osiemdziesiąt"
+            },
+            {
+              "spanish": "Noventa",
+              "polish": "Dziewięćdziesiąt"
+            },
+            {
+              "spanish": "Cien",
+              "polish": "Sto"
+            }
+          ]
+        },
+        {
           "title": "Dni tygodnia",
           "words": [
             {
@@ -90,27 +237,104 @@
           ]
         },
         {
-          "title": "Powitania",
+          "title": "Polecenia",
           "words": [
             {
-              "spanish": "Hola",
-              "polish": "Cześć"
+              "spanish": "Escucha",
+              "polish": "Słuchaj"
             },
             {
-              "spanish": "Buenos días",
-              "polish": "Dzień dobry"
+              "spanish": "Lee",
+              "polish": "Czytaj"
             },
             {
-              "spanish": "Buenas noches",
-              "polish": "Dobry wieczór"
+              "spanish": "Escribe",
+              "polish": "Pisz"
             },
             {
-              "spanish": "Adiós",
-              "polish": "Do widzenia"
+              "spanish": "Repite",
+              "polish": "Powtórz"
             },
             {
-              "spanish": "Hasta luego",
-              "polish": "Do zobaczenia"
+              "spanish": "Habla",
+              "polish": "Mów"
+            }
+          ]
+        },
+        {
+          "title": "Pory roku",
+          "words": [
+            {
+              "spanish": "Primavera",
+              "polish": "Wiosna"
+            },
+            {
+              "spanish": "Verano",
+              "polish": "Lato"
+            },
+            {
+              "spanish": "Otoño",
+              "polish": "Jesień"
+            },
+            {
+              "spanish": "Invierno",
+              "polish": "Zima"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "Czasowniki nieregularne",
+      "lessons": [
+        {
+          "title": "Odmiana 'ser'",
+          "words": [
+            {
+              "spanish": "Yo soy",
+              "polish": "Ja jestem"
+            },
+            {
+              "spanish": "Tú eres",
+              "polish": "Ty jesteś"
+            },
+            {
+              "spanish": "Él/Ella/Usted es",
+              "polish": "On/Ona/Pan/Pani jest"
+            }
+          ]
+        },
+        {
+          "title": "Odmiana 'tener'",
+          "words": [
+            {
+              "spanish": "Yo tengo",
+              "polish": "Ja mam"
+            },
+            {
+              "spanish": "Tú tienes",
+              "polish": "Ty masz"
+            },
+            {
+              "spanish": "Él/Ella/Usted tiene",
+              "polish": "On/Ona/Pan/Pani ma"
+            }
+          ]
+        },
+        {
+          "title": "Odmiana 'llamarse'",
+          "words": [
+            {
+              "spanish": "Me llamo",
+              "polish": "Nazywam się"
+            },
+            {
+              "spanish": "Te llamas",
+              "polish": "Nazywasz się"
+            },
+            {
+              "spanish": "Se llama",
+              "polish": "Nazywa się"
             }
           ]
         }
@@ -118,4 +342,3 @@
     }
   ]
 }
-

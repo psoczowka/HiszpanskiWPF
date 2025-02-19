@@ -16,11 +16,16 @@
 
         <!-- TreeView: Rozdziały i Lekcje (LEWY PANEL) -->
         <TreeView Grid.Column="0"
-                  ItemsSource="{Binding Chapters}"
-                  SelectedItemChanged="TreeView_SelectedItemChanged">
+          ItemsSource="{Binding Chapters}"
+          SelectedItemChanged="TreeView_SelectedItemChanged">
             <TreeView.ItemTemplate>
                 <HierarchicalDataTemplate ItemsSource="{Binding Lessons}">
-                    <TextBlock Text="{Binding Title}" FontSize="14"/>
+                    <StackPanel Orientation="Horizontal">
+                        <CheckBox IsChecked="{Binding IsSelected, Mode=TwoWay}"
+                          Command="{Binding DataContext.ToggleSelectionCommand, RelativeSource={RelativeSource AncestorType=Window}}"
+                          CommandParameter="{Binding}" />
+                        <TextBlock Text="{Binding Title}" FontSize="14"/>
+                    </StackPanel>
                 </HierarchicalDataTemplate>
             </TreeView.ItemTemplate>
         </TreeView>
