@@ -1,9 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.ComponentModel; // Potrzebne do powiadamiania UI
+using System.ComponentModel;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace HiszpanskiWpf
 {
@@ -34,6 +32,9 @@ namespace HiszpanskiWpf
                         lesson.IsSelected = value;
                     }
                 }
+
+                // Powiadomienie o zmianie wybranego materiału
+                MainViewModel.Instance?.UpdateSelectedWords();
             }
         }
 
@@ -45,15 +46,18 @@ namespace HiszpanskiWpf
                 _isSelected = Lessons.All(l => l.IsSelected);
                 OnPropertyChanged(nameof(IsSelected));
             }
+
+            // Powiadomienie o zmianie wybranego materiału
+            MainViewModel.Instance?.OnPropertyChanged(nameof(MainViewModel.SelectedWords));
+            MainViewModel.Instance?.UpdateCurrentQuestion();
         }
 
         public event PropertyChangedEventHandler PropertyChanged;
-        protected void OnPropertyChanged(string propertyName)
+        public void OnPropertyChanged(string propertyName)
         {
             PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));
         }
     }
-
 
     public class Lesson : INotifyPropertyChanged
     {
@@ -72,6 +76,9 @@ namespace HiszpanskiWpf
                 // Znajdź rozdział, do którego należy ta lekcja i zaktualizuj jego zaznaczenie
                 var parentChapter = MainViewModel.Instance?.Chapters.FirstOrDefault(ch => ch.Lessons.Contains(this));
                 parentChapter?.UpdateSelection();
+
+                // Powiadomienie o zmianie wybranego materiału
+                MainViewModel.Instance?.UpdateSelectedWords();
             }
         }
 

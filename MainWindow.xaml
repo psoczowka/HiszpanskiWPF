@@ -33,22 +33,53 @@
         </TreeView>
 
         <!-- Na razie środkowy panel jest pusty -->
-        <TextBlock Grid.Column="1" Text="Wybierz lekcję, aby zobaczyć jej treść" 
-                   HorizontalAlignment="Center" VerticalAlignment="Center"
-                   FontSize="16" FontWeight="Bold"/>
+        <!-- Środkowy panel: Wyświetlanie pytań i odpowiedzi -->
+        <StackPanel Grid.Column="1" VerticalAlignment="Center" HorizontalAlignment="Center">
+            <TextBlock Text="{Binding CurrentQuestion}" FontSize="20" FontWeight="Bold" Margin="0,0,0,10"/>
+
+            <TextBox Text="{Binding UserAnswer, Mode=TwoWay}" 
+                 Width="300" Height="30" 
+                 FontSize="16" Margin="0,0,0,10" 
+                 VerticalContentAlignment="Center"/>
+
+            <Button Content="Sprawdź odpowiedź" 
+                Command="{Binding CheckAnswerCommand}" 
+                Width="150" Height="40"/>
+
+            <TextBlock Text="{Binding FeedbackMessage}" 
+                   FontSize="16" Foreground="Red" 
+                   Margin="0,20,0,0"/>
+        </StackPanel>
         <!-- Wybór kierunku nauki (PRAWY PANEL) -->
         <StackPanel Grid.Column="2" Margin="10">
-            <TextBlock Text="Kierunek nauki:" FontWeight="Bold" FontSize="14" Margin="0,0,0,10"/>
+            <TextBlock Text="Kierunek nauki:" FontWeight="Bold" FontSize="14" Margin="20,10,0,10"/>
 
             <RadioButton Content="Hiszpański → Polski"
-                         IsChecked="{Binding LearningDirection, Converter={StaticResource EnumToBooleanConverter}, ConverterParameter=SpanishToPolish}"
-                         Command="{Binding ChangeDirectionCommand}"
-                         CommandParameter="SpanishToPolish"/>
+                 IsChecked="{Binding LearningDirection, Converter={StaticResource EnumToBooleanConverter}, ConverterParameter=SpanishToPolish}"
+                 Command="{Binding ChangeDirectionCommand}"
+                 CommandParameter="SpanishToPolish"/>
 
             <RadioButton Content="Polski → Hiszpański"
-                         IsChecked="{Binding LearningDirection, Converter={StaticResource EnumToBooleanConverter}, ConverterParameter=PolishToSpanish}"
-                         Command="{Binding ChangeDirectionCommand}"
-                         CommandParameter="PolishToSpanish"/>
+                 IsChecked="{Binding LearningDirection, Converter={StaticResource EnumToBooleanConverter}, ConverterParameter=PolishToSpanish}"
+                 Command="{Binding ChangeDirectionCommand}"
+                 CommandParameter="PolishToSpanish"/>
+
+            <TextBlock Text="Poziom podpowiedzi:" FontWeight="Bold" FontSize="14" Margin="20,10,0,10"/>
+
+            <RadioButton Content="Gwiazdki"
+                 IsChecked="{Binding HintLevel, Converter={StaticResource EnumToBooleanConverter}, ConverterParameter=StarsOnly}"
+                 Command="{Binding ChangeHintLevelCommand}"
+                 CommandParameter="StarsOnly"/>
+
+            <RadioButton Content="Gwiazdki + Litery"
+                 IsChecked="{Binding HintLevel, Converter={StaticResource EnumToBooleanConverter}, ConverterParameter=StarsAndLetters}"
+                 Command="{Binding ChangeHintLevelCommand}"
+                 CommandParameter="StarsAndLetters"/>
+
+            <RadioButton Content="Brak podpowiedzi"
+                 IsChecked="{Binding HintLevel, Converter={StaticResource EnumToBooleanConverter}, ConverterParameter=NoHints}"
+                 Command="{Binding ChangeHintLevelCommand}"
+                 CommandParameter="NoHints"/>
         </StackPanel>
     </Grid>
 </Window>
