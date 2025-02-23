@@ -32,15 +32,19 @@
             </TreeView.ItemTemplate>
         </TreeView>
 
-        <!-- Na razie środkowy panel jest pusty -->
         <!-- Środkowy panel: Wyświetlanie pytań i odpowiedzi -->
         <StackPanel Grid.Column="1" VerticalAlignment="Center" HorizontalAlignment="Center">
             <TextBlock Text="{Binding CurrentQuestion}" FontSize="20" FontWeight="Bold" Margin="0,0,0,10"/>
 
-            <TextBox Text="{Binding UserAnswer, Mode=TwoWay}" 
-                 Width="300" Height="30" 
-                 FontSize="16" Margin="0,0,0,10" 
-                 VerticalContentAlignment="Center"/>
+            <TextBox x:Name="UserAnswerTextBox" 
+                    Text="{Binding UserAnswer, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" 
+                    Width="300" Height="30" 
+                    FontSize="16" Margin="0,0,0,10" 
+                    VerticalContentAlignment="Center">
+                <TextBox.InputBindings>
+                    <KeyBinding Key="Enter" Command="{Binding CheckAnswerCommand}" />
+                </TextBox.InputBindings>
+            </TextBox>
 
             <Button Content="Sprawdź odpowiedź" 
                 Command="{Binding CheckAnswerCommand}" 

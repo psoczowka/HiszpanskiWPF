@@ -8,6 +8,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows;
+using System.Windows.Controls;
 using System.Windows.Input;
 
 namespace HiszpanskiWpf
@@ -186,6 +187,15 @@ namespace HiszpanskiWpf
             {
                 FeedbackMessage = "Nie znaleziono odpowiedzi. Wybierz materiał ponownie.";
             }
+
+            // Ustawienie fokusu na TextBox po sprawdzeniu odpowiedzi
+            Application.Current.Dispatcher.Invoke(() =>
+            {
+                var textBox = Application.Current.Windows.OfType<MainWindow>()
+                                .FirstOrDefault()?
+                                .FindName("UserAnswerTextBox") as TextBox;
+                textBox?.Focus();
+            });
         }
 
         // Ładowanie kolejnego pytania
