@@ -7,16 +7,20 @@
           "title": "Powitania",
           "words": [
             {
-              "spanish": "Hola",
-              "polish": "Cześć"
+              "spanish": "Buenos días",
+              "polish": "Dzień dobry"
             },
             {
-              "spanish": "Buenos días",
+              "spanish": "Buenas tardes",
               "polish": "Dzień dobry"
             },
             {
               "spanish": "Buenas noches",
               "polish": "Dobry wieczór"
+            },
+            {
+              "spanish": "Hola",
+              "polish": "Cześć"
             },
             {
               "spanish": "Adiós",
@@ -25,6 +29,30 @@
             {
               "spanish": "Hasta luego",
               "polish": "Do zobaczenia"
+            },
+            {
+              "spanish": "Hasta pronto",
+              "polish": "Do zobaczenia wkrótce"
+            },
+            {
+              "spanish": "Hasta ahora",
+              "polish": "Na razie"
+            },
+            {
+              "spanish": "Hasta mañana",
+              "polish": "Do jutra"
+            },
+            {
+              "spanish": "¿Cómo estás?",
+              "polish": "Jak się masz?"
+            },
+            {
+              "spanish": "Muy bien, gracias. ¿Y tú?",
+              "polish": "Bardzo dobrze, dziękuję. A Ty?"
+            },
+            {
+              "spanish": "Mucho gusto",
+              "polish": "Miło mi poznać"
             }
           ]
         },
@@ -237,31 +265,6 @@
           ]
         },
         {
-          "title": "Polecenia",
-          "words": [
-            {
-              "spanish": "Escucha",
-              "polish": "Słuchaj"
-            },
-            {
-              "spanish": "Lee",
-              "polish": "Czytaj"
-            },
-            {
-              "spanish": "Escribe",
-              "polish": "Pisz"
-            },
-            {
-              "spanish": "Repite",
-              "polish": "Powtórz"
-            },
-            {
-              "spanish": "Habla",
-              "polish": "Mów"
-            }
-          ]
-        },
-        {
           "title": "Pory roku",
           "words": [
             {
@@ -299,8 +302,28 @@
               "polish": "Ty jesteś"
             },
             {
-              "spanish": "Él/Ella/Usted es",
-              "polish": "On/Ona/Pan/Pani jest"
+              "spanish": "Él es",
+              "polish": "On jest"
+            },
+            {
+              "spanish": "Ella es",
+              "polish": "Ona jest"
+            },
+            {
+              "spanish": "Nosotros somos",
+              "polish": "My jesteśmy"
+            },
+            {
+              "spanish": "Vosotros sois",
+              "polish": "Wy jesteście"
+            },
+            {
+              "spanish": "Ellos son",
+              "polish": "Oni są"
+            },
+            {
+              "spanish": "Ellas son",
+              "polish": "One są"
             }
           ]
         },
@@ -316,8 +339,28 @@
               "polish": "Ty masz"
             },
             {
-              "spanish": "Él/Ella/Usted tiene",
-              "polish": "On/Ona/Pan/Pani ma"
+              "spanish": "Él tiene",
+              "polish": "On ma"
+            },
+            {
+              "spanish": "Ella tiene",
+              "polish": "Ona ma"
+            },
+            {
+              "spanish": "Nosotros tenemos",
+              "polish": "My mamy"
+            },
+            {
+              "spanish": "Vosotros tenéis",
+              "polish": "Wy macie"
+            },
+            {
+              "spanish": "Ellos tienen",
+              "polish": "Oni mają"
+            },
+            {
+              "spanish": "Ellas tienen",
+              "polish": "One mają"
             }
           ]
         },
@@ -325,19 +368,149 @@
           "title": "Odmiana 'llamarse'",
           "words": [
             {
-              "spanish": "Me llamo",
-              "polish": "Nazywam się"
+              "spanish": "Yo me llamo",
+              "polish": "Ja nazywam się"
             },
             {
-              "spanish": "Te llamas",
-              "polish": "Nazywasz się"
+              "spanish": "Tú te llamas",
+              "polish": "Ty nazywasz się"
             },
             {
-              "spanish": "Se llama",
-              "polish": "Nazywa się"
+              "spanish": "Él se llama",
+              "polish": "On nazywa się"
+            },
+            {
+              "spanish": "Ella se llama",
+              "polish": "Ona nazywa się"
+            },
+            {
+              "spanish": "Nosotros nos llamamos",
+              "polish": "My nazywamy się"
+            },
+            {
+              "spanish": "Vosotros os llamáis",
+              "polish": "Wy nazywacie się"
+            },
+            {
+              "spanish": "Ellos se llaman",
+              "polish": "Oni nazywają się"
+            },
+            {
+              "spanish": "Ellas se llaman",
+              "polish": "One nazywają się"
             }
           ]
         }
+      ]
+    },
+    {
+      "title": "Kolokwium 3",
+      "lessons": [
+        {
+          "title": "Profesje",
+          "words": [
+            {
+              "spanish": "Médico",
+              "polish": "Lekarz"
+            },
+            {
+              "spanish": "Arquitecto",
+              "polish": "Architekt"
+            },
+            {
+              "spanish": "Profesor",
+              "polish": "Nauczyciel"
+            },
+            {
+              "spanish": "Abogado",
+              "polish": "Prawnik"
+            },
+            {
+              "spanish": "Periodista",
+              "polish": "Dziennikarz"
+            },
+            {
+              "spanish": "Piloto",
+              "polish": "Pilot"
+            },
+            {
+              "spanish": "Dependienta",
+              "polish": "Ekspedientka"
+            },
+            {
+              "spanish": "Azafata",
+              "polish": "Stewardesa"
+            },
+            {
+              "spanish": "Diseñadora",
+              "polish": "Projektantka"
+            },
+            {
+              "spanish": "Camarero",
+              "polish": "Kelner"
+            }
+          ]
+        },
+        {
+          "title": "Miejsca pracy",
+          "words": [
+            {
+              "spanish": "Una compañía aérea",
+              "polish": "Linia lotnicza"
+            },
+            {
+              "spanish": "Una tienda",
+              "polish": "Sklep"
+            },
+            {
+              "spanish": "Un hospital",
+              "polish": "Szpital"
+            },
+            {
+              "spanish": "Un bufete",
+              "polish": "Kancelaria prawna"
+            },
+            {
+              "spanish": "Un periódico",
+              "polish": "Gazeta"
+            },
+            {
+              "spanish": "Una escuela",
+              "polish": "Szkoła"
+            },
+            {
+              "spanish": "Un supermercado",
+              "polish": "Supermarket"
+            },
+            {
+              "spanish": "Una universidad",
+              "polish": "Uniwersytet"
+            },
+            {
+              "spanish": "Un estudio de diseños",
+              "polish": "Studio projektowe"
+            },
+            {
+              "spanish": "Una empresa",
+              "polish": "Firma"
+            },
+            {
+              "spanish": "Una oficina",
+              "polish": "Biuro"
+            },
+            {
+              "spanish": "Un bar",
+              "polish": "Bar"
+            },
+            {
+              "spanish": "Un restaurante",
+              "polish": "Restauracja"
+            }
+          ]
+        }
+
+
+
       ]
     }
   ]
