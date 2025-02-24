@@ -168,7 +168,7 @@ namespace HiszpanskiWpf
         public ICommand CheckAnswerCommand { get; }
 
         // Logika sprawdzania odpowiedzi
-        private void CheckAnswer()
+        private async void CheckAnswer()
         {
             if (SelectedWords.Count == 0)
             {
@@ -193,13 +193,24 @@ namespace HiszpanskiWpf
                     {
                         Score++; // Dodaj punkt tylko wtedy, gdy nie było złej odpowiedzi
                         FeedbackMessage = "Dobrze! Brawo!";
+
+                        // Natychmiast przejdź do kolejnego pytania
+                        LoadNextQuestion();
                     }
                     else
                     {
                         FeedbackMessage = "Poprawnie, ale nie dostajesz punktu za wcześniejszy błąd.";
+
+                        // Odśwież widok
+                        OnPropertyChanged(nameof(FeedbackMessage));
+
+                        // Czekaj 1 sekundę, aby użytkownik zobaczył komunikat
+                        await Task.Delay(1000);
+
+                        // Przejdź do następnego pytania
+                        LoadNextQuestion();
                     }
 
-                    LoadNextQuestion();
                 }
                 else
                 {
