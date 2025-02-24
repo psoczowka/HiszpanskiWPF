@@ -90,6 +90,18 @@ namespace HiszpanskiWpf
             }
         }
 
+        // Śledzi, czy użytkownik odpowiedział źle na dane pytanie
+        private bool _hasAnsweredWrong;
+        public bool HasAnsweredWrong
+        {
+            get => _hasAnsweredWrong;
+            set
+            {
+                _hasAnsweredWrong = value;
+                OnPropertyChanged(nameof(HasAnsweredWrong));
+            }
+        }
+
         // Odpowiedź użytkownika
         private string _userAnswer;
         public string UserAnswer
@@ -177,8 +189,16 @@ namespace HiszpanskiWpf
 
                 if (isCorrect)
                 {
-                    FeedbackMessage = "Dobrze! Brawo!";
-                    Score++; // Dodaj punkt za dobrą odpowiedź
+                    if (!HasAnsweredWrong)
+                    {
+                        Score++; // Dodaj punkt tylko wtedy, gdy nie było złej odpowiedzi
+                        FeedbackMessage = "Dobrze! Brawo!";
+                    }
+                    else
+                    {
+                        FeedbackMessage = "Poprawnie, ale nie dostajesz punktu za wcześniejszy błąd.";
+                    }
+
                     LoadNextQuestion();
                 }
                 else
@@ -187,6 +207,9 @@ namespace HiszpanskiWpf
                         (LearningDirection == LearningDirection.SpanishToPolish
                             ? currentWord.Polish
                             : currentWord.Spanish);
+
+                    // Oznacz pytanie jako odpowiedziane źle
+                    HasAnsweredWrong = true;
                 }
             }
             else
@@ -252,6 +275,9 @@ namespace HiszpanskiWpf
             // Reset odpowiedzi użytkownika i komunikatu zwrotnego
             UserAnswer = "";
             FeedbackMessage = "";
+
+            // Resetuj `HasAnsweredWrong` dla nowego pytania
+            HasAnsweredWrong = false;
         }
 
 
