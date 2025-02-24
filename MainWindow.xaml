@@ -43,12 +43,17 @@
                     VerticalContentAlignment="Center">
                 <TextBox.InputBindings>
                     <KeyBinding Key="Enter" Command="{Binding CheckAnswerCommand}" />
+                    <KeyBinding Key="Esc" Command="{Binding SkipQuestionCommand}" />
                 </TextBox.InputBindings>
             </TextBox>
 
             <Button Content="Sprawdź odpowiedź" 
                 Command="{Binding CheckAnswerCommand}" 
                 Width="150" Height="40"/>
+            
+                <Button Content="Pomiń (Esc)" 
+            Command="{Binding SkipQuestionCommand}" 
+            Width="150" Height="40"/>
 
             <TextBlock Text="{Binding FeedbackMessage}" 
                    FontSize="16" Foreground="Red" 

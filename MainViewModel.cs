@@ -247,8 +247,29 @@ namespace HiszpanskiWpf
             ChangeDirectionCommand = new RelayCommand<string>(ChangeDirection);
             ChangeHintLevelCommand = new RelayCommand<string>(ChangeHintLevel);
             CheckAnswerCommand = new RelayCommand(CheckAnswer);
+            SkipQuestionCommand = new RelayCommand(SkipQuestion);
 
             // Pobierz pierwsze pytanie po załadowaniu danych
+            LoadNextQuestion();
+        }
+
+        private async void SkipQuestion()
+        {
+            // Jeśli nie ma więcej pytań, wyświetl komunikat
+            if (SelectedWords.Count == 0)
+            {
+                FeedbackMessage = "Wybierz materiał do nauki";
+                return;
+            }
+
+            FeedbackMessage = "Pytanie pominięte";
+
+            // Odśwież widok
+            OnPropertyChanged(nameof(FeedbackMessage));
+
+            // Czekaj 1 sekundę, aby użytkownik zobaczył komunikat
+            await Task.Delay(1000);
+
             LoadNextQuestion();
         }
 
@@ -277,6 +298,7 @@ namespace HiszpanskiWpf
         }
 
         public ICommand ChangeHintLevelCommand { get; }
+        public ICommand SkipQuestionCommand { get; }
 
         private void ChangeHintLevel(string level)
         {
