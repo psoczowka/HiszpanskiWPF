@@ -136,13 +136,18 @@ namespace HiszpanskiWpf
 
             SelectedWords = words;
 
-            // Jeśli coś zostało zaznaczone, załaduj nowe pytanie
+            // Jeśli coś zostało zaznaczone, rozpoczynamy nową sesję
             if (SelectedWords.Count > 0)
             {
-                UpdateCurrentQuestion();
+                StartNewSession(); // Rozpocznij nową sesję
             }
             else
             {
+                // Jeśli nic nie zostało wybrane, czyścimy pytania i licznik punktów
+                _randomizedQuestions.Clear();
+                _currentQuestionIndex = -1;
+                Score = 0;
+                TotalQuestions = 0;
                 CurrentQuestion = "Wybierz materiał do nauki.";
             }
         }
@@ -173,6 +178,7 @@ namespace HiszpanskiWpf
                 if (isCorrect)
                 {
                     FeedbackMessage = "Dobrze! Brawo!";
+                    Score++; // Dodaj punkt za dobrą odpowiedź
                     LoadNextQuestion();
                 }
                 else
@@ -201,25 +207,53 @@ namespace HiszpanskiWpf
         // Ładowanie kolejnego pytania
         private void LoadNextQuestion()
         {
-            if (SelectedWords.Count > 0)
+            // Jeśli nie ma więcej pytań, zakończ sesję
+            if (_currentQuestionIndex >= _randomizedQuestions.Count - 1)
             {
-                var random = new Random();
-                var nextWord = SelectedWords[random.Next(SelectedWords.Count)];
-                CurrentQuestion = LearningDirection == LearningDirection.SpanishToPolish
-                    ? nextWord.Spanish
-                    : nextWord.Polish;
+                CurrentQuestion = "Koniec materiału! Zdobyte punkty: " + Score + " / " + TotalQuestions;
+                FeedbackMessage = "Sesja zakończona.";
+                return;
+            }
 
-                // Reset odpowiedzi użytkownika
-                UserAnswer = "";
-                FeedbackMessage = "";
-            }
-            else
+            // Przejdź do następnego pytania
+            _currentQuestionIndex++;
+            var nextWord = _randomizedQuestions[_currentQuestionIndex];
+
+            // Wybierz pytanie w zależności od kierunku nauki
+            string question = LearningDirection == LearningDirection.SpanishToPolish
+                ? nextWord.Spanish
+                : nextWord.Polish;
+
+            // Uwzględnij poziom podpowiedzi
+            switch (HintLevel)
             {
-                CurrentQuestion = "Wybierz materiał do nauki.";
-                UserAnswer = "";
-                FeedbackMessage = "";
+                case HintLevel.StarsOnly:
+                    CurrentQuestion = new string('*', question.Length);
+                    break;
+
+                case HintLevel.StarsAndLetters:
+                    var hint = new StringBuilder();
+                    for (int i = 0; i < question.Length; i++)
+                    {
+                        if (i % 3 == 0)
+                            hint.Append(question[i]);
+                        else
+                            hint.Append('*');
+                    }
+                    CurrentQuestion = hint.ToString();
+                    break;
+
+                case HintLevel.NoHints:
+                default:
+                    CurrentQuestion = question;
+                    break;
             }
+
+            // Reset odpowiedzi użytkownika i komunikatu zwrotnego
+            UserAnswer = "";
+            FeedbackMessage = "";
         }
+
 
         private LearningDirection _learningDirection = LearningDirection.SpanishToPolish;
         public LearningDirection LearningDirection
@@ -271,6 +305,56 @@ namespace HiszpanskiWpf
             await Task.Delay(1000);
 
             LoadNextQuestion();
+        }
+
+        // Lista pytań w losowej kolejności
+        private List<Word> _randomizedQuestions = new List<Word>();
+        private int _currentQuestionIndex = -1;
+
+        // Licznik punktów
+        private int _score = 0;
+        public int Score
+        {
+            get => _score;
+            set
+            {
+                _score = value;
+                OnPropertyChanged(nameof(Score));
+            }
+        }
+
+        // Liczba wszystkich pytań w sesji
+        private int _totalQuestions;
+        public int TotalQuestions
+        {
+            get => _totalQuestions;
+            set
+            {
+                _totalQuestions = value;
+                OnPropertyChanged(nameof(TotalQuestions));
+            }
+        }
+
+        public void StartNewSession()
+        {
+            // Pobierz wszystkie wybrane pytania i wymieszaj je losowo
+            _randomizedQuestions = SelectedWords.OrderBy(_ => Guid.NewGuid()).ToList();
+            _currentQuestionIndex = -1;
+            Score = 0;
+
+            // Aktualizacja całkowitej liczby pytań
+            TotalQuestions = _randomizedQuestions.Count;
+
+            // Jeśli są jakieś pytania, rozpocznij sesję
+            if (TotalQuestions > 0)
+            {
+                LoadNextQuestion();
+            }
+            else
+            {
+                CurrentQuestion = "Wybierz materiał do nauki.";
+                FeedbackMessage = "";
+            }
         }
 
         private void ChangeDirection(string direction)

@@ -34,6 +34,13 @@
 
         <!-- Środkowy panel: Wyświetlanie pytań i odpowiedzi -->
         <StackPanel Grid.Column="1" VerticalAlignment="Center" HorizontalAlignment="Center">
+            <TextBlock Text="Punkty: "
+           FontSize="16" FontWeight="Bold" Margin="0,0,0,10">
+                        <Run Text="{Binding Score}" />
+                        <Run Text=" / " />
+                        <Run Text="{Binding TotalQuestions}" />
+            </TextBlock>
+
             <TextBlock Text="{Binding CurrentQuestion}" FontSize="20" FontWeight="Bold" Margin="0,0,0,10"/>
 
             <TextBox x:Name="UserAnswerTextBox" 
