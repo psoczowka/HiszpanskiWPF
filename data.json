@@ -507,8 +507,61 @@
               "polish": "Restauracja"
             }
           ]
-        }
+        },
 
+        {
+          "title": "Częstotliwości",
+          "words": [
+            {
+              "spanish": "Normalmente",
+              "polish": "Zazwyczaj"
+            },
+            {
+              "spanish": "A menudo",
+              "polish": "Często"
+            },
+            {
+              "spanish": "Muy a menudo",
+              "polish": "Bardzo często"
+            },
+            {
+              "spanish": "A veces",
+              "polish": "Czasem"
+            },
+            {
+              "spanish": "De vez en cuando",
+              "polish": "Od czasu do czasu"
+            },
+            {
+              "spanish": "Muy pocas veces",
+              "polish": "Bardzo rzadko"
+            },
+            {
+              "spanish": "Todos los días",
+              "polish": "Codziennie"
+            },
+            {
+              "spanish": "Una vez a la semana",
+              "polish": "Raz w tygodniu"
+            },
+            {
+              "spanish": "Dos veces al año",
+              "polish": "Dwa razy w roku"
+            },
+            {
+              "spanish": "Casi nunca",
+              "polish": "Prawie nigdy"
+            },
+            {
+              "spanish": "Nunca",
+              "polish": "Nigdy"
+            },
+            {
+              "spanish": "Siempre",
+              "polish": "Zawsze"
+            }
+          ]
+        }
 
 
       ]
