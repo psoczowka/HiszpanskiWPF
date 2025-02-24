@@ -4,6 +4,58 @@
              xmlns:local="clr-namespace:HiszpanskiWpf"
              StartupUri="MainWindow.xaml">
     <Application.Resources>
+        <!-- Styl dla przycisków -->
+        <Style TargetType="Button">
+            <Setter Property="FontSize" Value="16"/>
+            <Setter Property="Padding" Value="10,5"/>
+            <Setter Property="BorderThickness" Value="0"/>
+            <Setter Property="Background" Value="#4CAF50" />
+            <Setter Property="Foreground" Value="White" />
+            <Setter Property="Cursor" Value="Hand"/>
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="Button">
+                        <Border Background="{TemplateBinding Background}" 
+                        CornerRadius="8" 
+                        BorderBrush="{TemplateBinding BorderBrush}" 
+                        BorderThickness="{TemplateBinding BorderThickness}">
+                            <ContentPresenter HorizontalAlignment="Center" 
+                                      VerticalAlignment="Center"/>
+                        </Border>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+            <Setter Property="Effect">
+                <Setter.Value>
+                    <DropShadowEffect Color="Black" BlurRadius="8" ShadowDepth="2"/>
+                </Setter.Value>
+            </Setter>
+        </Style>
+
+        <!-- Czerwony styl dla przycisku "Pomiń" -->
+        <Style x:Key="RedButtonStyle" TargetType="Button" BasedOn="{StaticResource {x:Type Button}}">
+            <Setter Property="Background" Value="#F44336" />
+            <!-- Czerwony kolor -->
+            <Setter Property="Foreground" Value="White" />
+        </Style>
+
+        <!-- Styl dla TextBox -->
+        <Style TargetType="TextBox">
+            <Setter Property="FontSize" Value="18"/>
+            <Setter Property="Padding" Value="10"/>
+            <Setter Property="Margin" Value="0,0,0,10"/>
+            <Setter Property="BorderThickness" Value="1"/>
+            <Setter Property="BorderBrush" Value="#CCCCCC"/>
+            <Setter Property="Background" Value="White"/>
+            <Setter Property="VerticalContentAlignment" Value="Center"/>
+        </Style>
+
+        <!-- Styl dla głównego Grid -->
+        <Style TargetType="Grid">
+            <Setter Property="Background" Value="#F5F5F5"/>
+        </Style>
+
+        <!-- Konwerter Enum na Boolean -->
         <local:EnumToBooleanConverter x:Key="EnumToBooleanConverter"/>
     </Application.Resources>
 </Application>

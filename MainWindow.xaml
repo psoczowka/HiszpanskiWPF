@@ -10,7 +10,7 @@
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="200"/>
             <!-- Lewy panel z TreeView -->
-            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="3*"/>
             <!-- Środkowy panel na ćwiczenia -->
             <ColumnDefinition Width="200"/>
             <!-- Prawy panel z opcjami nauki -->
@@ -45,7 +45,7 @@
 
             <TextBox x:Name="UserAnswerTextBox" 
                     Text="{Binding UserAnswer, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" 
-                    Width="300" Height="30" 
+                    Width="300" Height="50" 
                     FontSize="16" Margin="0,0,0,10" 
                     VerticalContentAlignment="Center">
                 <TextBox.InputBindings>
@@ -54,13 +54,16 @@
                 </TextBox.InputBindings>
             </TextBox>
 
-            <Button Content="Sprawdź odpowiedź" 
-                Command="{Binding CheckAnswerCommand}" 
-                Width="150" Height="40"/>
-            
+            <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" Margin="0,20,0,0">
+                <Button Content="Sprawdź odpowiedź" 
+            Command="{Binding CheckAnswerCommand}" 
+            Width="150" Height="40" Margin="0,0,10,0" />
+
                 <Button Content="Pomiń (Esc)" 
             Command="{Binding SkipQuestionCommand}" 
-            Width="150" Height="40"/>
+            Width="150" Height="40" 
+            Style="{StaticResource RedButtonStyle}"/>
+            </StackPanel>
 
             <TextBlock Text="{Binding FeedbackMessage}" 
                    FontSize="16" Foreground="Red" 
