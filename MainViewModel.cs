@@ -97,10 +97,12 @@ namespace HiszpanskiWpf
         }
 
         // Etykieta informująca użytkownika, co ma zrobić
-        public string InstructionLabel =>
-            LearningDirection == LearningDirection.SpanishToPolish
+        public string InstructionLabel
+        {
+            get => LearningDirection == LearningDirection.SpanishToPolish
                 ? "Przetłumacz na polski"
                 : "Przetłumacz na hiszpański";
+        }
 
         // Pytanie wyświetlane w środkowym panelu
         private string _currentQuestion;
@@ -331,10 +333,12 @@ namespace HiszpanskiWpf
             {
                 _learningDirection = value;
                 OnPropertyChanged(nameof(LearningDirection));
-                UpdateCurrentQuestion();
 
-                // Automatyczne odświeżenie środkowego panelu
-                // OnPropertyChanged(nameof(FilteredWords));
+                // Powiadomienie o zmianie InstructionLabel
+                OnPropertyChanged(nameof(InstructionLabel));
+
+                // Aktualizacja pytania z uwzględnieniem nowego kierunku nauki
+                UpdateCurrentQuestion();
             }
         }
 
