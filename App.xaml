@@ -41,6 +41,25 @@
             <Setter Property="Foreground" Value="White" />
         </Style>
 
+        <!-- Niebieski styl dla przycisku "Wycisz" -->
+        <Style x:Key="MuteButtonStyle" TargetType="Button" BasedOn="{StaticResource {x:Type Button}}">
+            <Setter Property="FontSize" Value="14"/>
+            <Setter Property="Padding" Value="10,5"/>
+            <Setter Property="Background" Value="#007ACC"/>
+            <!-- Niebieski kolor -->
+            <Setter Property="Foreground" Value="White"/>
+            <Setter Property="BorderThickness" Value="0"/>
+            <Setter Property="BorderBrush" Value="Transparent"/>
+            <Setter Property="Effect">
+                <Setter.Value>
+                    <DropShadowEffect Color="Black" BlurRadius="8" ShadowDepth="2"/>
+                </Setter.Value>
+            </Setter>
+            <Setter Property="HorizontalAlignment" Value="Center"/>
+            <Setter Property="VerticalAlignment" Value="Bottom"/>
+            <Setter Property="Margin" Value="5"/>
+        </Style>
+
         <!-- Styl dla TextBox -->
         <Style TargetType="TextBox">
             <Setter Property="FontSize" Value="18"/>

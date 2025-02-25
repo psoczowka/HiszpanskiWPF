@@ -28,8 +28,33 @@ namespace HiszpanskiWpf
     }
     public class MainViewModel : INotifyPropertyChanged
     {
+        // Wyciszenie dźwięków
+        private bool _isMuted;
+        public bool IsMuted
+        {
+            get => _isMuted;
+            set
+            {
+                _isMuted = value;
+                OnPropertyChanged(nameof(IsMuted));
+                OnPropertyChanged(nameof(MuteButtonText));
+            }
+        }
+
+        public ICommand ToggleMuteCommand { get; }
+
+        private void ToggleMute()
+        {
+            IsMuted = !IsMuted;
+        }
+
+        // Tekst na przycisku Wycisz/Włącz dźwięk
+        public string MuteButtonText => IsMuted ? "Włącz dźwięk" : "Wycisz";
+
         private void PlaySound(string soundFileName)
         {
+            if (IsMuted) return; // Jeśli wyciszone, nie odtwarzaj dźwięku
+
             try
             {
                 string soundPath = System.IO.Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "Sounds", soundFileName);
@@ -41,6 +66,7 @@ namespace HiszpanskiWpf
                 MessageBox.Show($"Błąd podczas odtwarzania dźwięku: {ex.Message}");
             }
         }
+
 
         public void UpdateCurrentQuestion()
         {
@@ -371,6 +397,7 @@ namespace HiszpanskiWpf
             ChangeHintLevelCommand = new RelayCommand<string>(ChangeHintLevel);
             CheckAnswerCommand = new RelayCommand(CheckAnswer);
             SkipQuestionCommand = new RelayCommand(SkipQuestion);
+            ToggleMuteCommand = new RelayCommand(ToggleMute);
 
             // Pobierz pierwsze pytanie po załadowaniu danych
             LoadNextQuestion();
