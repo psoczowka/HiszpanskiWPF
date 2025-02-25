@@ -35,38 +35,43 @@ namespace HiszpanskiWpf
                 var random = new Random();
                 var nextWord = SelectedWords[random.Next(SelectedWords.Count)];
 
-                // Wybierz pytanie w zależności od kierunku nauki
+                // Ustal pytanie i odpowiedź w zależności od kierunku nauki
                 string question = LearningDirection == LearningDirection.SpanishToPolish
                     ? nextWord.Spanish
                     : nextWord.Polish;
 
-                // Uwzględnij poziom podpowiedzi
+                string answer = LearningDirection == LearningDirection.SpanishToPolish
+                    ? nextWord.Polish
+                    : nextWord.Spanish;
+
+                // Generowanie podpowiedzi w zależności od poziomu podpowiedzi
                 switch (HintLevel)
                 {
                     case HintLevel.StarsOnly:
-                        CurrentQuestion = new string('*', question.Length);
+                        CurrentHint = new string('*', answer.Length);
                         break;
 
                     case HintLevel.StarsAndLetters:
                         var hint = new StringBuilder();
-                        for (int i = 0; i < question.Length; i++)
+                        for (int i = 0; i < answer.Length; i++)
                         {
-                            // Losowo pokazujemy litery (co trzecią) zamiast gwiazdek
+                            // Pokazujemy co trzecią literę, reszta to gwiazdki
                             if (i % 3 == 0)
-                                hint.Append(question[i]);
+                                hint.Append(answer[i]);
                             else
                                 hint.Append('*');
                         }
-                        CurrentQuestion = hint.ToString();
+                        CurrentHint = hint.ToString();
                         break;
 
                     case HintLevel.NoHints:
                     default:
-                        CurrentQuestion = question;
+                        CurrentHint = ""; // Brak podpowiedzi
                         break;
                 }
 
-                // Reset odpowiedzi użytkownika i komunikatu zwrotnego
+                // Ustawienie pytania i wyczyszczenie odpowiedzi użytkownika
+                CurrentQuestion = question;
                 UserAnswer = "";
                 FeedbackMessage = "";
             }
@@ -75,8 +80,27 @@ namespace HiszpanskiWpf
                 CurrentQuestion = "Wybierz materiał do nauki.";
                 UserAnswer = "";
                 FeedbackMessage = "";
+                CurrentHint = "";
             }
         }
+
+        // Podpowiedź wyświetlana pod pytaniem
+        private string _currentHint;
+        public string CurrentHint
+        {
+            get => _currentHint;
+            set
+            {
+                _currentHint = value;
+                OnPropertyChanged(nameof(CurrentHint));
+            }
+        }
+
+        // Etykieta informująca użytkownika, co ma zrobić
+        public string InstructionLabel =>
+            LearningDirection == LearningDirection.SpanishToPolish
+                ? "Przetłumacz na polski"
+                : "Przetłumacz na hiszpański";
 
         // Pytanie wyświetlane w środkowym panelu
         private string _currentQuestion;
@@ -246,6 +270,7 @@ namespace HiszpanskiWpf
             {
                 CurrentQuestion = "Koniec materiału! Zdobyte punkty: " + Score + " / " + TotalQuestions;
                 FeedbackMessage = "Sesja zakończona.";
+                CurrentHint = ""; // Brak podpowiedzi na zakończenie sesji
                 return;
             }
 
@@ -254,32 +279,37 @@ namespace HiszpanskiWpf
             var nextWord = _randomizedQuestions[_currentQuestionIndex];
 
             // Wybierz pytanie w zależności od kierunku nauki
-            string question = LearningDirection == LearningDirection.SpanishToPolish
+            CurrentQuestion = LearningDirection == LearningDirection.SpanishToPolish
                 ? nextWord.Spanish
                 : nextWord.Polish;
 
-            // Uwzględnij poziom podpowiedzi
+            string answer = LearningDirection == LearningDirection.SpanishToPolish
+                ? nextWord.Polish
+                : nextWord.Spanish;
+
+            // Generowanie podpowiedzi w zależności od poziomu podpowiedzi
             switch (HintLevel)
             {
                 case HintLevel.StarsOnly:
-                    CurrentQuestion = new string('*', question.Length);
+                    CurrentHint = new string('*', answer.Length);
                     break;
 
                 case HintLevel.StarsAndLetters:
                     var hint = new StringBuilder();
-                    for (int i = 0; i < question.Length; i++)
+                    for (int i = 0; i < answer.Length; i++)
                     {
+                        // Pokazujemy co trzecią literę, reszta to gwiazdki
                         if (i % 3 == 0)
-                            hint.Append(question[i]);
+                            hint.Append(answer[i]);
                         else
                             hint.Append('*');
                     }
-                    CurrentQuestion = hint.ToString();
+                    CurrentHint = hint.ToString();
                     break;
 
                 case HintLevel.NoHints:
                 default:
-                    CurrentQuestion = question;
+                    CurrentHint = ""; // Brak podpowiedzi
                     break;
             }
 
@@ -290,6 +320,7 @@ namespace HiszpanskiWpf
             // Resetuj `HasAnsweredWrong` dla nowego pytania
             HasAnsweredWrong = false;
         }
+
 
 
         private LearningDirection _learningDirection = LearningDirection.SpanishToPolish;
