@@ -77,7 +77,7 @@ namespace HiszpanskiWpf
             }
             else
             {
-                CurrentQuestion = "Wybierz materiał do nauki.";
+                CurrentQuestion = "Wybierz materiał do nauki";
                 UserAnswer = "";
                 FeedbackMessage = "";
                 CurrentHint = "";
@@ -186,7 +186,7 @@ namespace HiszpanskiWpf
                 _currentQuestionIndex = -1;
                 Score = 0;
                 TotalQuestions = 0;
-                CurrentQuestion = "Wybierz materiał do nauki.";
+                CurrentQuestion = "Wybierz materiał do nauki";
             }
         }
 
@@ -198,7 +198,7 @@ namespace HiszpanskiWpf
         {
             if (SelectedWords.Count == 0)
             {
-                FeedbackMessage = "Wybierz materiał do nauki.";
+                FeedbackMessage = "Wybierz materiał do nauki";
                 return;
             }
 
@@ -225,7 +225,7 @@ namespace HiszpanskiWpf
                     }
                     else
                     {
-                        FeedbackMessage = "Poprawnie, ale nie dostajesz punktu za wcześniejszy błąd.";
+                        FeedbackMessage = "Poprawnie, ale nie dostajesz punktu za wcześniejszy błąd";
 
                         // Odśwież widok
                         OnPropertyChanged(nameof(FeedbackMessage));
@@ -325,7 +325,7 @@ namespace HiszpanskiWpf
 
 
 
-        private LearningDirection _learningDirection = LearningDirection.SpanishToPolish;
+        private LearningDirection _learningDirection = LearningDirection.PolishToSpanish;
         public LearningDirection LearningDirection
         {
             get => _learningDirection;
@@ -424,7 +424,7 @@ namespace HiszpanskiWpf
             }
             else
             {
-                CurrentQuestion = "Wybierz materiał do nauki.";
+                CurrentQuestion = "Wybierz materiał do nauki";
                 FeedbackMessage = "";
             }
         }
