@@ -10,10 +10,22 @@
 
   <ItemGroup>
     <None Remove="data.json" />
+    <None Remove="Sounds\correct.wav" />
+    <None Remove="Sounds\correct_after_mistake.wav" />
+    <None Remove="Sounds\wrong.wav" />
   </ItemGroup>
 
   <ItemGroup>
     <Content Include="data.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Sounds\correct.wav">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Sounds\correct_after_mistake.wav">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Sounds\wrong.wav">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
   </ItemGroup>

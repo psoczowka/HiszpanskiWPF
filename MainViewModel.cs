@@ -10,6 +10,7 @@ using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Input;
+using System.Media;
 
 namespace HiszpanskiWpf
 {
@@ -27,6 +28,19 @@ namespace HiszpanskiWpf
     }
     public class MainViewModel : INotifyPropertyChanged
     {
+        private void PlaySound(string soundFileName)
+        {
+            try
+            {
+                string soundPath = System.IO.Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "Sounds", soundFileName);
+                SoundPlayer player = new SoundPlayer(soundPath);
+                player.Play();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"Błąd podczas odtwarzania dźwięku: {ex.Message}");
+            }
+        }
 
         public void UpdateCurrentQuestion()
         {
@@ -217,6 +231,7 @@ namespace HiszpanskiWpf
                 {
                     if (!HasAnsweredWrong)
                     {
+                        PlaySound("correct.wav");
                         Score++; // Dodaj punkt tylko wtedy, gdy nie było złej odpowiedzi
                         FeedbackMessage = "Dobrze! Brawo!";
 
@@ -225,6 +240,7 @@ namespace HiszpanskiWpf
                     }
                     else
                     {
+                        PlaySound("correct_after_mistake.wav");
                         FeedbackMessage = "Poprawnie, ale nie dostajesz punktu za wcześniejszy błąd";
 
                         // Odśwież widok
@@ -240,6 +256,7 @@ namespace HiszpanskiWpf
                 }
                 else
                 {
+                    PlaySound("wrong.wav");
                     FeedbackMessage = $"Źle! Poprawna odpowiedź to: " +
                         (LearningDirection == LearningDirection.SpanishToPolish
                             ? currentWord.Polish
