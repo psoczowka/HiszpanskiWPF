@@ -38,6 +38,18 @@ namespace HiszpanskiWpf
             }
         }
 
+        // IsExpanded, aby TreeView był domyślnie rozwinięty
+        private bool _isExpanded = true;
+        public bool IsExpanded
+        {
+            get => _isExpanded;
+            set
+            {
+                _isExpanded = value;
+                OnPropertyChanged(nameof(IsExpanded));
+            }
+        }
+
         public void UpdateSelection()
         {
             if (Lessons != null)

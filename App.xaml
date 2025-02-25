@@ -4,6 +4,8 @@
              xmlns:local="clr-namespace:HiszpanskiWpf"
              StartupUri="MainWindow.xaml">
     <Application.Resources>
+        <!-- Konwerter Enum na Boolean -->
+        <local:EnumToBooleanConverter x:Key="EnumToBooleanConverter"/>
         <!-- Styl dla przycisków -->
         <Style TargetType="Button">
             <Setter Property="FontSize" Value="16"/>
@@ -54,8 +56,6 @@
         <Style TargetType="Grid">
             <Setter Property="Background" Value="#F5F5F5"/>
         </Style>
-
-        <!-- Konwerter Enum na Boolean -->
-        <local:EnumToBooleanConverter x:Key="EnumToBooleanConverter"/>
+        
     </Application.Resources>
 </Application>
