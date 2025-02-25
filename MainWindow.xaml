@@ -5,12 +5,12 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:HiszpanskiWpf"
         mc:Ignorable="d"
-        Title="Hiszpański WPF" Height="450" Width="800">
+        Title="Hiszpański WPF" Height="450" Width="900">
     <Grid>
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="200"/>
             <!-- Lewy panel z TreeView -->
-            <ColumnDefinition Width="3*"/>
+            <ColumnDefinition Width="500"/>
             <!-- Środkowy panel na ćwiczenia -->
             <ColumnDefinition Width="200"/>
             <!-- Prawy panel z opcjami nauki -->
@@ -40,24 +40,27 @@
                    FontSize="18" 
                    FontWeight="Bold"
                    Foreground="#555"
-                   Margin="0,0,0,10"/>
+                   Margin="0,0,0,10"
+                   TextAlignment="Center"/>
 
 
             <!-- Treść pyatnia -->
-            <TextBlock Text="{Binding CurrentQuestion}" FontSize="20" FontWeight="Bold" Margin="0,0,0,10"/>
+            <TextBlock Text="{Binding CurrentQuestion}" FontSize="20" FontWeight="Bold" Margin="0,0,0,10" TextAlignment="Center"/>
 
             <!-- Podpowiedź poniżej pytania -->
             <TextBlock Text="{Binding CurrentHint}" 
                    FontSize="20" 
                    FontStyle="Italic" 
                    Foreground="#888" 
-                   Margin="0,0,0,20"/>
+                   Margin="0,0,0,20"
+                   TextAlignment="Center"/>
 
             <TextBox x:Name="UserAnswerTextBox" 
                     Text="{Binding UserAnswer, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" 
                     Width="300" Height="50" 
                     FontSize="16" Margin="0,0,0,10" 
-                    VerticalContentAlignment="Center">
+                    VerticalContentAlignment="Center"
+                    HorizontalContentAlignment="Center">
                 <TextBox.InputBindings>
                     <KeyBinding Key="Enter" Command="{Binding CheckAnswerCommand}" />
                     <KeyBinding Key="Esc" Command="{Binding SkipQuestionCommand}" />
@@ -65,14 +68,14 @@
             </TextBox>
 
             <TextBlock Text="Punkty: "
-           FontSize="16" FontWeight="Bold" Margin="0,0,0,10">
+           FontSize="16" FontWeight="Bold" Margin="0,0,0,10" TextAlignment="Center">
                         <Run Text="{Binding Score}" />
                         <Run Text=" / " />
                         <Run Text="{Binding TotalQuestions}" />
             </TextBlock>
 
             <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" Margin="0,20,0,0">
-                <Button Content="Sprawdź odpowiedź" 
+                <Button Content="Sprawdź (Enter)" 
             Command="{Binding CheckAnswerCommand}" 
             Width="150" Height="40" Margin="0,0,10,0" />
 
@@ -84,7 +87,8 @@
 
             <TextBlock Text="{Binding FeedbackMessage}" 
                    FontSize="16" Foreground="Red" 
-                   Margin="0,20,0,0"/>
+                   Margin="0,20,0,0"
+                   TextAlignment="Center"/>
         </StackPanel>
         <!-- Wybór kierunku nauki (PRAWY PANEL) -->
         <StackPanel Grid.Column="2" Margin="10">
