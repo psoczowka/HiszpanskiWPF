@@ -447,9 +447,6 @@ namespace HiszpanskiWpf
                 _hintLevel = value;
                 OnPropertyChanged(nameof(HintLevel));
                 UpdateCurrentQuestion();
-
-                // Automatyczne odświeżenie środkowego panelu
-                //OnPropertyChanged(nameof(FilteredWords));
             }
         }
 

@@ -29,7 +29,7 @@
             <TreeView.ItemTemplate>
                 <HierarchicalDataTemplate ItemsSource="{Binding Lessons}">
                     <StackPanel Orientation="Horizontal">
-                        <CheckBox IsChecked="{Binding IsSelected, Mode=TwoWay}"
+                        <CheckBox Padding="2" IsChecked="{Binding IsSelected, Mode=TwoWay}"
                           Command="{Binding DataContext.ToggleSelectionCommand, RelativeSource={RelativeSource AncestorType=Window}}"
                           CommandParameter="{Binding}" />
                         <TextBlock Text="{Binding Title}" FontSize="14"/>
@@ -66,7 +66,8 @@
                     Width="300" Height="50" 
                     FontSize="16" Margin="0,0,0,10" 
                     VerticalContentAlignment="Center"
-                    HorizontalContentAlignment="Center">
+                    HorizontalContentAlignment="Center"
+                    PreviewKeyDown="UserAnswerTextBox_PreviewKeyDown">
                 <TextBox.InputBindings>
                     <KeyBinding Key="Enter" Command="{Binding CheckAnswerCommand}" />
                     <KeyBinding Key="Esc" Command="{Binding SkipQuestionCommand}" />
