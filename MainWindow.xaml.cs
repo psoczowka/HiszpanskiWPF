@@ -32,8 +32,11 @@ namespace HiszpanskiWpf
 
         private void UserAnswerTextBox_PreviewKeyDown(object sender, KeyEventArgs e)
         {
-            // Sprawdzamy, czy jest wciśnięty Ctrl (lewy lub prawy)
-            bool isCtrlPressed = Keyboard.IsKeyDown(Key.LeftCtrl) || Keyboard.IsKeyDown(Key.RightCtrl);
+            // Sprawdzamy, czy jest wciśnięty Ctrl (lewy lub prawy), ale NIE Alt
+            bool isCtrlPressed =
+                (Keyboard.IsKeyDown(Key.LeftCtrl) || Keyboard.IsKeyDown(Key.RightCtrl)) &&
+                !Keyboard.IsKeyDown(Key.LeftAlt) &&
+                !Keyboard.IsKeyDown(Key.RightAlt);
 
             // Sprawdzamy, czy jest wciśnięty Shift
             bool isShiftPressed = Keyboard.IsKeyDown(Key.LeftShift) || Keyboard.IsKeyDown(Key.RightShift);
@@ -46,7 +49,7 @@ namespace HiszpanskiWpf
                 return;
             }
 
-            // Jeśli jest tylko Ctrl (bez Shift) to wpisujemy hiszpański znak
+            // Jeśli jest tylko Ctrl (bez Alt) to wpisujemy hiszpański znak
             if (isCtrlPressed)
             {
                 switch (e.Key)
