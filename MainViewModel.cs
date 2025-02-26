@@ -551,9 +551,22 @@ namespace HiszpanskiWpf
         {
             try
             {
-                string filePath = "data.json";
-                var data = DataLoader.LoadData(filePath);
-                Chapters = new ObservableCollection<Chapter>(data.Chapters);
+                // Ustal ścieżkę do katalogu, w którym jest uruchamiana aplikacja
+                string exeDirectory = AppDomain.CurrentDomain.BaseDirectory;
+
+                // Plik JSON powinien znajdować się w tym samym katalogu co plik .exe
+                string filePath = Path.Combine(exeDirectory, "data.json");
+
+                // Sprawdź, czy plik istnieje
+                if (!File.Exists(filePath))
+                {
+                    MessageBox.Show($"Plik JSON nie został znaleziony: {filePath}");
+                    return;
+                }
+
+                // Wczytaj dane z pliku JSON
+                var data = DataLoader.LoadData(filePath); //  Zmienna data jest poprawnie przypisana
+                Chapters = new ObservableCollection<Chapter>(data.Chapters); //  Chapters jest poprawnie użyte
             }
             catch (Exception ex)
             {

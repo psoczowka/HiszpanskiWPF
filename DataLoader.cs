@@ -2,9 +2,6 @@
 using System;
 using System.Collections.Generic;
 using System.IO;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace HiszpanskiWpf
 {
@@ -16,6 +13,7 @@ namespace HiszpanskiWpf
                 throw new FileNotFoundException("Nie znaleziono pliku JSON", filePath);
 
             string json = File.ReadAllText(filePath);
+            // Zwracamy LanguageData
             return JsonConvert.DeserializeObject<LanguageData>(json);
         }
     }
