@@ -32,49 +32,55 @@ namespace HiszpanskiWpf
 
         private void UserAnswerTextBox_PreviewKeyDown(object sender, KeyEventArgs e)
         {
-            // Sprawdzamy, czy jest wciśnięty Ctrl + Alt lub RightAlt (AltGr)
-            bool isCtrlAlt = (Keyboard.IsKeyDown(Key.LeftCtrl) || Keyboard.IsKeyDown(Key.RightCtrl))
-                             && (Keyboard.IsKeyDown(Key.LeftAlt) || Keyboard.IsKeyDown(Key.RightAlt));
-            bool isAltGr = Keyboard.IsKeyDown(Key.RightAlt);
+            // Sprawdzamy, czy jest wciśnięty Ctrl (lewy lub prawy)
+            bool isCtrlPressed = Keyboard.IsKeyDown(Key.LeftCtrl) || Keyboard.IsKeyDown(Key.RightCtrl);
 
-            // Jeżeli jest wciśnięty Ctrl + Alt lub AltGr
-            if (isCtrlAlt || isAltGr)
+            // Sprawdzamy, czy jest wciśnięty Shift
+            bool isShiftPressed = Keyboard.IsKeyDown(Key.LeftShift) || Keyboard.IsKeyDown(Key.RightShift);
+
+            // Dodajemy obsługę Ctrl + Shift + A => Zaznacz wszystko
+            if (isCtrlPressed && isShiftPressed && e.Key == Key.A)
             {
-                TextBox textBox = sender as TextBox;
-                int caretIndex = textBox.CaretIndex;
+                UserAnswerTextBox.SelectAll();
+                e.Handled = true;
+                return;
+            }
 
+            // Jeśli jest tylko Ctrl (bez Shift) to wpisujemy hiszpański znak
+            if (isCtrlPressed)
+            {
                 switch (e.Key)
                 {
-                    case Key.N:
-                        InsertSpecialCharacter(textBox, "ñ", caretIndex);
+                    case Key.A:
+                        InsertCharacter('á');
                         e.Handled = true;
                         break;
                     case Key.E:
-                        InsertSpecialCharacter(textBox, "é", caretIndex);
+                        InsertCharacter('é');
                         e.Handled = true;
                         break;
                     case Key.I:
-                        InsertSpecialCharacter(textBox, "í", caretIndex);
+                        InsertCharacter('í');
                         e.Handled = true;
                         break;
                     case Key.O:
-                        InsertSpecialCharacter(textBox, "ó", caretIndex);
+                        InsertCharacter('ó');
                         e.Handled = true;
                         break;
                     case Key.U:
-                        InsertSpecialCharacter(textBox, "ú", caretIndex);
+                        InsertCharacter('ú');
                         e.Handled = true;
                         break;
-                    case Key.A:
-                        InsertSpecialCharacter(textBox, "á", caretIndex);
+                    case Key.N:
+                        InsertCharacter('ñ');
                         e.Handled = true;
                         break;
-                    case Key.OemQuestion: // ? → ¿
-                        InsertSpecialCharacter(textBox, "¿", caretIndex);
+                    case Key.OemQuestion:  // klawisz '/'
+                        InsertCharacter('¿');
                         e.Handled = true;
                         break;
-                    case Key.Oem1: // ! → ¡ (Oem1 to klawisz z "!" na większości klawiatur)
-                        InsertSpecialCharacter(textBox, "¡", caretIndex);
+                    case Key.OemMinus:     // klawisz '-'
+                        InsertCharacter('¡');
                         e.Handled = true;
                         break;
                 }
@@ -82,10 +88,17 @@ namespace HiszpanskiWpf
         }
 
         // Metoda pomocnicza do wstawiania znaku w miejscu kursora
-        private void InsertSpecialCharacter(TextBox textBox, string character, int caretIndex)
+        private void InsertCharacter(char character)
         {
-            textBox.Text = textBox.Text.Insert(caretIndex, character);
-            textBox.CaretIndex = caretIndex + character.Length;
+            var textBox = UserAnswerTextBox;
+            int selectionStart = textBox.SelectionStart;
+
+            // Wstaw znak w miejscu kursora
+            textBox.Text = textBox.Text.Insert(selectionStart, character.ToString());
+
+            // Przesuń kursor za nowy znak
+            textBox.SelectionStart = selectionStart + 1;
+            textBox.SelectionLength = 0;
         }
 
 
