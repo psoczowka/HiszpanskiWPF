@@ -43,6 +43,23 @@ namespace HiszpanskiWpf
             LoadNextQuestion();
         }
 
+        // Metoda do usuwania znaków interpunkcyjnych
+        private string RemovePunctuation(string input)
+        {
+            if (string.IsNullOrEmpty(input))
+                return input;
+
+            // Usuwamy wszystkie znaki interpunkcyjne
+            var charsToRemove = new char[] { '.', ',', '!', '?', ':', ';', '¡', '¿' };
+            foreach (var c in charsToRemove)
+            {
+                input = input.Replace(c.ToString(), "");
+            }
+
+            // Usuwamy dodatkowe spacje powstałe po usunięciu znaków
+            return input.Trim();
+        }
+
         // Wyciszenie dźwięków
         private bool _isMuted;
         public bool IsMuted
@@ -262,11 +279,19 @@ namespace HiszpanskiWpf
                     ? w.Spanish == CurrentQuestion
                     : w.Polish == CurrentQuestion);
 
+            // Usuń interpunkcję z odpowiedzi użytkownika i poprawnej odpowiedzi
+            string cleanedUserAnswer = RemovePunctuation(UserAnswer).ToLower();
+            string cleanedCorrectAnswer = RemovePunctuation(
+                LearningDirection == LearningDirection.SpanishToPolish
+                    ? currentWord.Polish
+                    : currentWord.Spanish
+            ).ToLower();
+
+
             if (currentWord != null)
             {
-                bool isCorrect = LearningDirection == LearningDirection.SpanishToPolish
-                    ? UserAnswer.Equals(currentWord.Polish, StringComparison.OrdinalIgnoreCase)
-                    : UserAnswer.Equals(currentWord.Spanish, StringComparison.OrdinalIgnoreCase);
+                // Porównanie oczyszczonych odpowiedzi
+                bool isCorrect = cleanedUserAnswer.Equals(cleanedCorrectAnswer);
 
                 if (isCorrect)
                 {
