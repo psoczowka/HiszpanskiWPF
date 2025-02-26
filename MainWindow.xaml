@@ -102,7 +102,10 @@
             <TextBlock Text="{Binding FeedbackMessage}" 
                    FontSize="16" Foreground="Red" 
                    Margin="0,20,0,0"
-                   TextAlignment="Center"/>
+                   TextAlignment="Center"
+                   TextWrapping="Wrap"
+                   Width="450"
+                   MinHeight="50"/>
         </StackPanel>
         <!-- Wybór kierunku nauki (PRAWY PANEL) -->
         <Border Grid.Column="2" BorderBrush="#CCCCCC" BorderThickness="1" >
