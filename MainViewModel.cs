@@ -102,59 +102,62 @@ namespace HiszpanskiWpf
 
         public void UpdateCurrentQuestion()
         {
-            if (SelectedWords.Count > 0)
+            // Jeśli nie ma wybranych słów, wyświetl komunikat i wyczyść podpowiedź
+            if (SelectedWords.Count == 0)
             {
-                var random = new Random();
-                var nextWord = SelectedWords[random.Next(SelectedWords.Count)];
-
-                // Ustal pytanie i odpowiedź w zależności od kierunku nauki
-                string question = LearningDirection == LearningDirection.SpanishToPolish
-                    ? nextWord.Spanish
-                    : nextWord.Polish;
-
-                string answer = LearningDirection == LearningDirection.SpanishToPolish
-                    ? nextWord.Polish
-                    : nextWord.Spanish;
-
-                // Generowanie podpowiedzi w zależności od poziomu podpowiedzi
-                switch (HintLevel)
-                {
-                    case HintLevel.StarsOnly:
-                        CurrentHint = new string('*', answer.Length);
-                        break;
-
-                    case HintLevel.StarsAndLetters:
-                        var hint = new StringBuilder();
-                        for (int i = 0; i < answer.Length; i++)
-                        {
-                            // Pokazujemy co trzecią literę, reszta to gwiazdki
-                            if (i % 3 == 0)
-                                hint.Append(answer[i]);
-                            else
-                                hint.Append('*');
-                        }
-                        CurrentHint = hint.ToString();
-                        break;
-
-                    case HintLevel.NoHints:
-                    default:
-                        CurrentHint = ""; // Brak podpowiedzi
-                        break;
-                }
-
-                // Ustawienie pytania i wyczyszczenie odpowiedzi użytkownika
-                CurrentQuestion = question;
-                UserAnswer = "";
-                FeedbackMessage = "";
+                CurrentQuestion = "Wybierz materiał do nauki.";
+                CurrentHint = ""; // Brak podpowiedzi, gdy nie ma wybranego materiału
+                UserAnswer = ""; // Reset odpowiedzi użytkownika
+                FeedbackMessage = ""; // Reset komunikatu zwrotnego
+                return;
             }
-            else
+
+            var random = new Random();
+            var nextWord = SelectedWords[random.Next(SelectedWords.Count)];
+
+            // Wybierz pytanie w zależności od kierunku nauki
+            string question = LearningDirection == LearningDirection.SpanishToPolish
+                ? nextWord.Spanish
+                : nextWord.Polish;
+
+            string answer = LearningDirection == LearningDirection.SpanishToPolish
+                ? nextWord.Polish
+                : nextWord.Spanish;
+
+            // Uwzględnij poziom podpowiedzi
+            switch (HintLevel)
             {
-                CurrentQuestion = "Wybierz materiał do nauki";
-                UserAnswer = "";
-                FeedbackMessage = "";
-                CurrentHint = "";
+                case HintLevel.StarsOnly:
+                    CurrentHint = new string('*', answer.Length);
+                    break;
+
+                case HintLevel.StarsAndLetters:
+                    var hint = new StringBuilder();
+                    for (int i = 0; i < answer.Length; i++)
+                    {
+                        // Losowo pokazujemy litery (co trzecią) zamiast gwiazdek
+                        if (i % 3 == 0)
+                            hint.Append(answer[i]);
+                        else
+                            hint.Append('*');
+                    }
+                    CurrentHint = hint.ToString();
+                    break;
+
+                case HintLevel.NoHints:
+                default:
+                    CurrentHint = ""; // Brak podpowiedzi
+                    break;
             }
+
+            // Wyświetl pytanie
+            CurrentQuestion = question;
+
+            // Reset odpowiedzi użytkownika i komunikatu zwrotnego
+            UserAnswer = "";
+            FeedbackMessage = "";
         }
+
 
         // Podpowiedź wyświetlana pod pytaniem
         private string _currentHint;
