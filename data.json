@@ -468,7 +468,7 @@
             },
             {
               "spanish": "Un bufete",
-              "polish": "Kancelaria prawna"
+              "polish": "Kancelaria"
             },
             {
               "spanish": "Un periódico",
@@ -559,6 +559,423 @@
             {
               "spanish": "Siempre",
               "polish": "Zawsze"
+            }
+          ]
+        },
+
+        {
+          "title": "Czasowniki regularne",
+          "words": [
+            {
+              "spanish": "estudiar",
+              "polish": "studiować"
+            },
+            {
+              "spanish": "bailar",
+              "polish": "tańczyć"
+            },
+            {
+              "spanish": "cantar",
+              "polish": "śpiewać"
+            },
+            {
+              "spanish": "hablar",
+              "polish": "mówić"
+            },
+            {
+              "spanish": "preguntar",
+              "polish": "pytać"
+            },
+            {
+              "spanish": "contestar",
+              "polish": "odpowiadać"
+            },
+            {
+              "spanish": "regresar",
+              "polish": "wracać do"
+            },
+            {
+              "spanish": "comprar",
+              "polish": "kupować"
+            },
+            {
+              "spanish": "navegar por Internet",
+              "polish": "surfować po Internecie"
+            },
+            {
+              "spanish": "mirar",
+              "polish": "patrzeć"
+            },
+            {
+              "spanish": "escuchar",
+              "polish": "słuchać"
+            },
+            {
+              "spanish": "practicar",
+              "polish": "ćwiczyć"
+            },
+            {
+              "spanish": "trabajar",
+              "polish": "pracować"
+            },
+            {
+              "spanish": "leer",
+              "polish": "czytać"
+            },
+            {
+              "spanish": "beber",
+              "polish": "pić"
+            },
+            {
+              "spanish": "comer",
+              "polish": "jeść"
+            },
+            {
+              "spanish": "vender",
+              "polish": "sprzedawać"
+            },
+            {
+              "spanish": "escribir",
+              "polish": "pisać"
+            },
+            {
+              "spanish": "abrir",
+              "polish": "otwierać"
+            },
+            {
+              "spanish": "vivir",
+              "polish": "żyć"
+            }
+          ]
+        },
+
+
+        {
+          "title": "Odmiana regularnych",
+          "words": [
+            {
+              "spanish": "Yo escucho",
+              "polish": "Ja słucham"
+            },
+            {
+              "spanish": "Tú escuchas",
+              "polish": "Ty słuchasz"
+            },
+            {
+              "spanish": "Él escucha",
+              "polish": "On słucha"
+            },
+            {
+              "spanish": "Nosotros escuchamos",
+              "polish": "My słuchamy"
+            },
+            {
+              "spanish": "Vosotros escucháis",
+              "polish": "Wy słuchacie"
+            },
+            {
+              "spanish": "Ellos escuchan",
+              "polish": "Oni słuchają"
+            },
+
+            {
+              "spanish": "Yo canto",
+              "polish": "Ja śpiewam"
+            },
+            {
+              "spanish": "Tú cantas",
+              "polish": "Ty śpiewasz"
+            },
+            {
+              "spanish": "Él canta",
+              "polish": "On śpiewa"
+            },
+            {
+              "spanish": "Nosotros cantamos",
+              "polish": "My śpiewamy"
+            },
+            {
+              "spanish": "Vosotros cantáis",
+              "polish": "Wy śpiewacie"
+            },
+            {
+              "spanish": "Ellos cantan",
+              "polish": "Oni śpiewają"
+            },
+
+            {
+              "spanish": "Yo leo",
+              "polish": "Ja czytam"
+            },
+            {
+              "spanish": "Tú lees",
+              "polish": "Ty czytasz"
+            },
+            {
+              "spanish": "Él lee",
+              "polish": "On czyta"
+            },
+            {
+              "spanish": "Nosotros leemos",
+              "polish": "My czytamy"
+            },
+            {
+              "spanish": "Vosotros leéis",
+              "polish": "Wy czytacie"
+            },
+            {
+              "spanish": "Ellos leen",
+              "polish": "Oni czytają"
+            },
+
+            {
+              "spanish": "Yo bebo",
+              "polish": "Ja piję"
+            },
+            {
+              "spanish": "Tú bebes",
+              "polish": "Ty pijesz"
+            },
+            {
+              "spanish": "Él bebe",
+              "polish": "On pije"
+            },
+            {
+              "spanish": "Nosotros bebemos",
+              "polish": "My pijemy"
+            },
+            {
+              "spanish": "Vosotros bebéis",
+              "polish": "Wy pijecie"
+            },
+            {
+              "spanish": "Ellos beben",
+              "polish": "Oni piją"
+            },
+
+            {
+              "spanish": "Yo abro",
+              "polish": "Ja otwieram"
+            },
+            {
+              "spanish": "Tú abres",
+              "polish": "Ty otwierasz"
+            },
+            {
+              "spanish": "Él abre",
+              "polish": "On otwiera"
+            },
+            {
+              "spanish": "Nosotros abrimos",
+              "polish": "My otwieramy"
+            },
+            {
+              "spanish": "Vosotros abrís",
+              "polish": "Wy otwieracie"
+            },
+            {
+              "spanish": "Ellos abren",
+              "polish": "Oni otwierają"
+            },
+
+            {
+              "spanish": "Yo vivo",
+              "polish": "Ja mieszkam"
+            },
+            {
+              "spanish": "Tú vives",
+              "polish": "Ty mieszkasz"
+            },
+            {
+              "spanish": "Él vive",
+              "polish": "On mieszka"
+            },
+            {
+              "spanish": "Nosotros vivimos",
+              "polish": "My mieszkamy"
+            },
+            {
+              "spanish": "Vosotros vivís",
+              "polish": "Wy mieszkacie"
+            },
+            {
+              "spanish": "Ellos viven",
+              "polish": "Oni mieszkają"
+            }
+          ]
+        },
+
+        {
+          "title": "Pytania i odpowiedzi",
+          "words": [
+            {
+              "spanish": "¿Dónde trabaja el arquitecto?",
+              "polish": "Gdzie pracuje architekt?"
+            },
+            {
+              "spanish": "El arquitecto trabaja en un estudio de diseños.",
+              "polish": "Architekt pracuje w biurze projektowym."
+            },
+
+            {
+              "spanish": "¿Dónde trabaja el camarero?",
+              "polish": "Gdzie pracuje kelner?"
+            },
+            {
+              "spanish": "El camarero trabaja en un restaurante.",
+              "polish": "Kelner pracuje w restauracji."
+            },
+
+            {
+              "spanish": "¿Dónde trabaja el profesor?",
+              "polish": "Gdzie pracuje nauczyciel?"
+            },
+            {
+              "spanish": "El profesor trabaja en una escuela.",
+              "polish": "Nauczyciel pracuje w szkole."
+            },
+
+            {
+              "spanish": "¿Quién trabaja en un bufete?",
+              "polish": "Kto pracuje w kancelarii?"
+            },
+            {
+              "spanish": "El abogado trabaja en un bufete.",
+              "polish": "Prawnik pracuje w kancelarii."
+            },
+
+            {
+              "spanish": "¿Quién trabaja en un periódico?",
+              "polish": "Kto pracuje w gazecie?"
+            },
+            {
+              "spanish": "El periodista trabaja en un periódico.",
+              "polish": "Dziennikarz pracuje w gazecie."
+            },
+
+            {
+              "spanish": "¿Quién trabaja en un supermercado?",
+              "polish": "Kto pracuje w supermarkecie?"
+            },
+            {
+              "spanish": "El dependiente trabaja en un supermercado.",
+              "polish": "Sprzedawca pracuje w supermarkecie."
+            },
+
+            {
+              "spanish": "Mis amigos viven en España.",
+              "polish": "Moi przyjaciele mieszkają w Hiszpanii."
+            },
+
+            {
+              "spanish": "María canta muy bien.",
+              "polish": "María śpiewa bardzo dobrze."
+            },
+
+            {
+              "spanish": "Paco y yo navegamos por Internet todos los días.",
+              "polish": "Paco i ja surfujemy po Internecie codziennie."
+            },
+
+            {
+              "spanish": "Enrique y Sofía viajan mucho.",
+              "polish": "Enrique i Sofia dużo podróżują."
+            },
+
+            {
+              "spanish": "Los propietarios abren su restaurante cada dos días.",
+              "polish": "Właściciele otwierają swoją restaurację co dwa dni."
+            },
+
+            {
+              "spanish": "Yo escucho música cuando llego a casa.",
+              "polish": "Słucham muzyki, gdy wracam do domu."
+            },
+
+            {
+              "spanish": "¿Por qué estudias español?",
+              "polish": "Dlaczego uczysz się hiszpańskiego?"
+            },
+
+            {
+              "spanish": "¿Qué lenguas hablas?",
+              "polish": "Jakimi językami mówisz?"
+            },
+            {
+              "spanish": "Hablo español y polaco.",
+              "polish": "Mówię po hiszpańsku i polsku."
+            },
+
+            {
+              "spanish": "¿Dónde trabajas?",
+              "polish": "Gdzie pracujesz?"
+            },
+            {
+              "spanish": "Trabajo en una oficina.",
+              "polish": "Pracuję w biurze."
+            },
+
+            {
+              "spanish": "¿A qué hora terminan?",
+              "polish": "O której godzinie kończą?"
+            },
+            {
+              "spanish": "Terminan a las cinco.",
+              "polish": "Kończą o piątej."
+            },
+
+            {
+              "spanish": "¿Qué bebéis para el desayuno?",
+              "polish": "Co pijecie na śniadanie?"
+            },
+            {
+              "spanish": "Bebemos café.",
+              "polish": "Pijemy kawę."
+            },
+
+            {
+              "spanish": "¿Dónde vivís?",
+              "polish": "Gdzie mieszkacie?"
+            },
+            {
+              "spanish": "Vivimos en Madrid.",
+              "polish": "Mieszkamy w Madrycie."
+            },
+
+            {
+              "spanish": "¿Con quién Manuel compra regalos?",
+              "polish": "Z kim Manuel kupuje prezenty?"
+            },
+            {
+              "spanish": "Compra regalos con su madre.",
+              "polish": "Kupuje prezenty z mamą."
+            },
+
+            {
+              "spanish": "¿Qué vendes por Internet?",
+              "polish": "Co sprzedajesz przez Internet?"
+            },
+            {
+              "spanish": "Vendo libros por Internet.",
+              "polish": "Sprzedaję książki przez Internet."
+            },
+
+            {
+              "spanish": "¿Cuántos estudiantes comparten pisos?",
+              "polish": "Ilu studentów dzieli mieszkania?"
+            },
+            {
+              "spanish": "Tres estudiantes comparten pisos.",
+              "polish": "Trzech studentów dzieli mieszkania."
+            },
+
+            {
+              "spanish": "¿Con quién baila Lucía?",
+              "polish": "Z kim tańczy Lucía?"
+            },
+            {
+              "spanish": "Lucía baila con su amigo.",
+              "polish": "Lucía tańczy z przyjacielem."
             }
           ]
         }

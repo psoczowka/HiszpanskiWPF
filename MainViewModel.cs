@@ -28,6 +28,21 @@ namespace HiszpanskiWpf
     }
     public class MainViewModel : INotifyPropertyChanged
     {
+        // Konstruktor 
+        public MainViewModel()
+        {
+            Instance = this; // Umożliwia dostęp do `Chapters` w `Lesson`
+            LoadData();
+            ChangeDirectionCommand = new RelayCommand<string>(ChangeDirection);
+            ChangeHintLevelCommand = new RelayCommand<string>(ChangeHintLevel);
+            CheckAnswerCommand = new RelayCommand(CheckAnswer);
+            SkipQuestionCommand = new RelayCommand(SkipQuestion);
+            ToggleMuteCommand = new RelayCommand(ToggleMute);
+
+            // Pobierz pierwsze pytanie po załadowaniu danych
+            LoadNextQuestion();
+        }
+
         // Wyciszenie dźwięków
         private bool _isMuted;
         public bool IsMuted
@@ -388,20 +403,6 @@ namespace HiszpanskiWpf
         public ICommand ChangeDirectionCommand { get; }
 
         public static MainViewModel Instance { get; private set; }
-
-        public MainViewModel()
-        {
-            Instance = this; // Umożliwia dostęp do `Chapters` w `Lesson`
-            LoadData();
-            ChangeDirectionCommand = new RelayCommand<string>(ChangeDirection);
-            ChangeHintLevelCommand = new RelayCommand<string>(ChangeHintLevel);
-            CheckAnswerCommand = new RelayCommand(CheckAnswer);
-            SkipQuestionCommand = new RelayCommand(SkipQuestion);
-            ToggleMuteCommand = new RelayCommand(ToggleMute);
-
-            // Pobierz pierwsze pytanie po załadowaniu danych
-            LoadNextQuestion();
-        }
 
         private async void SkipQuestion()
         {
