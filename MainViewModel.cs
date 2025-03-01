@@ -328,7 +328,7 @@ namespace HiszpanskiWpf
                     PlaySound("wrong.wav");
                     FeedbackMessage = $"Źle! Poprawna odpowiedź to: " +
                         (LearningDirection == LearningDirection.SpanishToPolish
-                            ? currentWord.Polish
+                            ? currentWord.Polish    
                             : currentWord.Spanish);
 
                     // Oznacz pytanie jako odpowiedziane źle

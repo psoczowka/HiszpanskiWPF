@@ -978,6 +978,93 @@
               "polish": "Lucía tańczy z przyjacielem"
             }
           ]
+        },
+
+
+        {
+          "title": "¿Con qué frecuencia?",
+          "words": [
+            {
+              "spanish": "Yo bebo vino dos veces al año",
+              "polish": "Ja piję wino dwa razy do roku"
+            },
+            {
+              "spanish": "Ella practica deporte una vez a la semana",
+              "polish": "Ona uprawia sport raz w tygodniu"
+            },
+            {
+              "spanish": "Ellos nunca visitan museos",
+              "polish": "Oni nigdy nie odwiedzają muzeów"
+            },
+            {
+              "spanish": "Nosotros miramos la tele a veces",
+              "polish": "My oglądamy telewizję czasami"
+            },
+            {
+              "spanish": "Yo escribo correos electrónicos muy pocas veces",
+              "polish": "Ja piszę maile bardzo rzadko"
+            },
+            {
+              "spanish": "Vosotros navegáis por Internet todos los días",
+              "polish": "Wy surfujecie po internecie codziennie"
+            },
+            {
+              "spanish": "Tú comes en un restaurante de vez en cuando",
+              "polish": "Ty jesz w restauracji od czasu do czasu"
+            },
+            {
+              "spanish": "Tú escuchas música siempre",
+              "polish": "Ty zawsze słuchasz muzyki"
+            },
+            {
+              "spanish": "Yo nunca canto en la ducha",
+              "polish": "Ja nigdy nie śpiewam pod prysznicem"
+            },
+            {
+              "spanish": "Nosotros bailamos en las discotecas tres veces al mes",
+              "polish": "My tańczymy na dyskotekach trzy razy w miesiącu"
+            },
+            {
+              "spanish": "Yo hablo por teléfono todos los días",
+              "polish": "Ja codziennie rozmawiam przez telefon"
+            },
+            {
+              "spanish": "Ellos viajan muy pocas veces",
+              "polish": "Oni podróżują bardzo rzadko"
+            },
+            {
+              "spanish": "Nosotros estudiamos en la universidad una vez a la semana",
+              "polish": "My studiujemy na uniwersytecie raz w tygodniu"
+            },
+            {
+              "spanish": "Vosotros trabajáis en una oficina de vez en cuando",
+              "polish": "Wy pracujecie w biurze od czasu do czasu"
+            },
+            {
+              "spanish": "¿Con qué frecuencia bailas en las discotecas?",
+              "polish": "Jak często tańczysz na dyskotekach?"
+            },
+            {
+              "spanish": "¿Con qué frecuencia lees libros o periódicos?",
+              "polish": "Jak często czytasz książki lub gazety?"
+            },
+            {
+              "spanish": "¿Con qué frecuencia estudias en la universidad?",
+              "polish": "Jak często studiujesz na uniwersytecie?"
+            },
+            {
+              "spanish": "¿Con qué frecuencia viajas?",
+              "polish": "Jak często podróżujesz?"
+            },
+            {
+              "spanish": "¿Con qué frecuencia hablas por teléfono?",
+              "polish": "Jak często rozmawiasz przez telefon?"
+            },
+            {
+              "spanish": "¿Con qué frecuencia trabajas en la oficina?",
+              "polish": "Jak często pracujesz w biurze?"
+            }
+          ]
         }
 
 
