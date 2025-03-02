@@ -5,7 +5,8 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:HiszpanskiWpf"
         mc:Ignorable="d"
-        Title="Hiszpański WPF" Height="450" Width="900">
+        Title="Hiszpański WPF" Height="450" Width="900"
+        Icon="/Assets/hiszp_icon.ico">
     <Grid>
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="200"/>
