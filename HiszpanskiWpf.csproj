@@ -8,7 +8,6 @@
     <UseWPF>true</UseWPF>
 	
   </PropertyGroup>
-
   <ItemGroup>
     <None Remove="Assets\hiszp_icon.ico" />
     <None Remove="data.json" />

@@ -400,9 +400,47 @@
               "polish": "One nazywają się"
             }
           ]
+        },
+        {
+          "title": "Odmiana 'querer'",
+          "words": [
+            {
+              "spanish": "Yo quiero",
+              "polish": "Ja chcę"
+            },
+            {
+              "spanish": "Tú quieres",
+              "polish": "Ty chcesz"
+            },
+            {
+              "spanish": "Él quiere",
+              "polish": "On chce"
+            },
+            {
+              "spanish": "Ella quiere",
+              "polish": "Ona chce"
+            },
+            {
+              "spanish": "Nosotros queremos",
+              "polish": "My chcemy"
+            },
+            {
+              "spanish": "Vosotros queréis",
+              "polish": "Wy chcecie"
+            },
+            {
+              "spanish": "Ellos quieren",
+              "polish": "Oni chcą"
+            },
+            {
+              "spanish": "Ellas quieren",
+              "polish": "One chcą"
+            }
+          ]
         }
       ]
     },
+
     {
       "title": "Kolokwium 3",
       "lessons": [
@@ -1069,6 +1107,352 @@
 
 
       ]
+    },
+
+    {
+      "title": "Kolokwium 4",
+      "lessons": [
+        {
+          "title": "Wygląd",
+          "words": [
+            {
+              "spanish": "Yo soy alto",
+              "polish": "Ja jestem wysoki"
+            },
+            {
+              "spanish": "Tú eres bajo",
+              "polish": "Ty jesteś niski"
+            },
+            {
+              "spanish": "Ella es guapa",
+              "polish": "Ona jest piękna"
+            },
+            {
+              "spanish": "Él es feo",
+              "polish": "On jest brzydki"
+            },
+            {
+              "spanish": "Nosotros somos jóvenes",
+              "polish": "My jesteśmy młodzi"
+            },
+            {
+              "spanish": "Vosotros sois mayores",
+              "polish": "Wy jesteście starzy"
+            },
+            {
+              "spanish": "Ella es rubia",
+              "polish": "Ona jest blondynką"
+            },
+            {
+              "spanish": "Él es moreno",
+              "polish": "On jest brunetem"
+            },
+            {
+              "spanish": "Ellos son castaños",
+              "polish": "Oni są szatynami"
+            },
+            {
+              "spanish": "Él es canoso",
+              "polish": "On jest siwy"
+            },
+            {
+              "spanish": "Yo soy calvo",
+              "polish": "Ja jestem łysy"
+            },
+            {
+              "spanish": "Tú eres pelirrojo",
+              "polish": "Ty jesteś rudy"
+            },
+            {
+              "spanish": "Ella tiene pelo largo",
+              "polish": "Ona ma długie włosy"
+            },
+            {
+              "spanish": "Yo tengo pelo corto",
+              "polish": "Ja mam krótkie włosy"
+            },
+            {
+              "spanish": "Ella tiene pelo rizado",
+              "polish": "Ona ma kręcone włosy"
+            },
+            {
+              "spanish": "Él tiene pelo liso",
+              "polish": "On ma proste włosy"
+            },
+            {
+              "spanish": "Tú tienes ojos azules",
+              "polish": "Ty masz niebieskie oczy"
+            },
+            {
+              "spanish": "Nosotros tenemos ojos verdes",
+              "polish": "My mamy zielone oczy"
+            },
+            {
+              "spanish": "Ellos tienen ojos marrones",
+              "polish": "Oni mają brązowe oczy"
+            },
+            {
+              "spanish": "Tú tienes barba y bigote",
+              "polish": "Ty masz brodę i wąsy"
+            },
+            {
+              "spanish": "Ella tiene gafas negras",
+              "polish": "Ona nosi czarne okulary"
+            },
+            {
+              "spanish": "Es un poco viejo",
+              "polish": "Jest trochę stary"
+            },
+            {
+              "spanish": "¿Cómo es de aspecto físico tu mejor amiga?",
+              "polish": "Jak wygląda twoja najlepsza przyjaciółka?"
+            },
+            {
+              "spanish": "No tiene barba ni bigote",
+              "polish": "Nie ma ani brody, ani wąsów"
+            }
+          ]
+        },
+
+        {
+          "title": "Rodzina i związki",
+          "words": [
+            {
+              "spanish": "soltero",
+              "polish": "singiel"
+            },
+            {
+              "spanish": "prometida",
+              "polish": "narzeczona"
+            },
+            {
+              "spanish": "casado con",
+              "polish": "żonaty z"
+            },
+            {
+              "spanish": "separado",
+              "polish": "rozwiedziony"
+            },
+            {
+              "spanish": "divorciado",
+              "polish": "rozwiedziony"
+            },
+            {
+              "spanish": "viuda",
+              "polish": "wdowa"
+            },
+            {
+              "spanish": "pareja de hecho",
+              "polish": "konkubina"
+            },
+            {
+              "spanish": "Mi hermano no tiene novia ni mujer",
+              "polish": "Mój brat nie ma ani dziewczyny, ani żony"
+            },
+            {
+              "spanish": "Mi madre está casada con mi padre",
+              "polish": "Moja mama jest żoną mojego taty"
+            },
+            {
+              "spanish": "Mi abuelo está muerto, pues mi abuela es viuda",
+              "polish": "Mój dziadek nie żyje, moja babcia jest wdową"
+            },
+            {
+              "spanish": "Marta y Pablo tienen problemas, creo que ya están separados",
+              "polish": "Marta i Pablo mają problemy, myślę, że są w separacji"
+            },
+            {
+              "spanish": "Ernesto está divorciado de María porque cree que tiene dos amantes",
+              "polish": "Ernesto jest rozwiedziony z Marią, ponieważ uważa, że ma dwie kochanki"
+            }
+          ]
+        },
+
+
+
+
+        {
+          "title": "Cechy charakteru",
+          "words": [
+            {
+              "spanish": "abierto",
+              "polish": "otwarty"
+            },
+            {
+              "spanish": "activa",
+              "polish": "aktywna"
+            },
+            {
+              "spanish": "alegre",
+              "polish": "wesoły"
+            },
+            {
+              "spanish": "amable",
+              "polish": "uprzejmy"
+            },
+            {
+              "spanish": "antipático",
+              "polish": "niemiły"
+            },
+            {
+              "spanish": "callada",
+              "polish": "małomówna"
+            },
+            {
+              "spanish": "comprensivo",
+              "polish": "wyrozumiały"
+            },
+            {
+              "spanish": "comunicativa",
+              "polish": "komunikatywna"
+            },
+            {
+              "spanish": "conciliador",
+              "polish": "ugodowy"
+            },
+            {
+              "spanish": "creativa",
+              "polish": "kreatywna"
+            },
+            {
+              "spanish": "decidido",
+              "polish": "zdecydowany"
+            },
+            {
+              "spanish": "dinámica",
+              "polish": "dynamiczna"
+            },
+            {
+              "spanish": "distante",
+              "polish": "zdystansowany"
+            },
+            {
+              "spanish": "eficaz",
+              "polish": "skuteczny"
+            },
+            {
+              "spanish": "elegante",
+              "polish": "elegancki"
+            },
+            {
+              "spanish": "exigente",
+              "polish": "wymagający"
+            },
+            {
+              "spanish": "extrovertido",
+              "polish": "ekstrawertyczny"
+            },
+            {
+              "spanish": "formal",
+              "polish": "formalny"
+            },
+            {
+              "spanish": "generosa",
+              "polish": "hojna"
+            },
+            {
+              "spanish": "habilidoso",
+              "polish": "zdolny"
+            },
+            {
+              "spanish": "habladora",
+              "polish": "gadatliwa"
+            },
+            {
+              "spanish": "impaciente",
+              "polish": "niecierpliwy"
+            },
+            {
+              "spanish": "informado",
+              "polish": "poinformowany"
+            },
+            {
+              "spanish": "informal",
+              "polish": "nieformalny"
+            },
+            {
+              "spanish": "innovadora",
+              "polish": "innowacyjna"
+            },
+            {
+              "spanish": "inteligente",
+              "polish": "inteligentny"
+            },
+            {
+              "spanish": "interesante",
+              "polish": "interesujący"
+            },
+            {
+              "spanish": "introvertido",
+              "polish": "introwertyczny"
+            },
+            {
+              "spanish": "irresponsable",
+              "polish": "nieodpowiedzialny"
+            },
+            {
+              "spanish": "motivadora",
+              "polish": "motywująca"
+            },
+            {
+              "spanish": "nervioso",
+              "polish": "nerwowy"
+            },
+            {
+              "spanish": "paciente",
+              "polish": "cierpliwy"
+            },
+            {
+              "spanish": "responsable",
+              "polish": "odpowiedzialny"
+            },
+            {
+              "spanish": "seria",
+              "polish": "poważna"
+            },
+            {
+              "spanish": "simpático",
+              "polish": "sympatyczny"
+            },
+            {
+              "spanish": "sociable",
+              "polish": "towarzyski"
+            },
+            {
+              "spanish": "solidaria",
+              "polish": "pomocna"
+            },
+            {
+              "spanish": "tacaño",
+              "polish": "skąpy"
+            },
+            {
+              "spanish": "tolerante",
+              "polish": "tolerancyjny"
+            },
+            {
+              "spanish": "trabajadora",
+              "polish": "pracowita"
+            },
+            {
+              "spanish": "tranquilo",
+              "polish": "spokojny"
+            },
+            {
+              "spanish": "triste",
+              "polish": "smutny"
+            },
+            {
+              "spanish": "vaga",
+              "polish": "leniwa"
+            }
+          ]
+        }
+
+
+
+      ]
     }
   ]
 }
+
