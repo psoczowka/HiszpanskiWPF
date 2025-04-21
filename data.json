@@ -1447,7 +1447,323 @@
               "polish": "leniwa"
             }
           ]
+        },
+
+        {
+          "title": "Książka - dialog",
+          "words": [
+            {
+              "spanish": "¿Cómo es el director de tu departamento?",
+              "polish": "Jaki jest dyrektor twojego działu?"
+            },
+            {
+              "spanish": "Pedro es un hombre responsable y activo",
+              "polish": "Pedro to odpowiedzialny i aktywny człowiek"
+            },
+            {
+              "spanish": "Siempre quiere estar informado de todo",
+              "polish": "Zawsze chce być poinformowany o wszystkim"
+            },
+            {
+              "spanish": "Mi director es trabajador y simpático",
+              "polish": "Mój dyrektor jest pracowity i sympatyczny"
+            },
+            {
+              "spanish": "La directora de Recursos Humanos es seria y distante",
+              "polish": "Dyrektorka HR jest poważna i zdystansowana"
+            },
+            {
+              "spanish": "Su jefa de personal es sociable y simpática",
+              "polish": "Jej szefowa działu kadr jest towarzyska i sympatyczna"
+            },
+            {
+              "spanish": "¿Ella entrevista a los nuevos candidatos?",
+              "polish": "Czy ona przeprowadza rozmowy z nowymi kandydatami?"
+            },
+            {
+              "spanish": "Sí, es su trabajo",
+              "polish": "Tak, to jej praca"
+            },
+            {
+              "spanish": "Ella y Rosa quieren conocer bien a los futuros empleados",
+              "polish": "Ona i Rosa chcą dobrze poznać przyszłych pracowników"
+            },
+            {
+              "spanish": "¿Qué opinas de vuestro director de Producción?",
+              "polish": "Co sądzisz o waszym dyrektorze produkcji?"
+            },
+            {
+              "spanish": "Es un hombre trabajador y dinámico con grandes ideas",
+              "polish": "To pracowity i dynamiczny człowiek z wielkimi pomysłami"
+            },
+            {
+              "spanish": "Sus empleados son también muy dinámicos",
+              "polish": "Jego pracownicy są również bardzo dynamiczni"
+            },
+            {
+              "spanish": "En nuestras empresas trabaja gente muy interesante y activa",
+              "polish": "W naszych firmach pracują bardzo interesujący i aktywni ludzie"
+            },
+            {
+              "spanish": "Nosotros también somos trabajadores, interesantes y activos",
+              "polish": "My także jesteśmy pracowici, interesujący i aktywni"
+            },
+            {
+              "spanish": "Queremos hacer bien nuestro trabajo",
+              "polish": "Chcemy dobrze wykonywać naszą pracę"
+            },
+            {
+              "spanish": "¿No crees?",
+              "polish": "Nie sądzisz?"
+            },
+            {
+              "spanish": "Sí, es verdad",
+              "polish": "Tak, to prawda"
+            }
+          ]
+        },
+
+        {
+          "title": "Rodzajniki",
+          "words": [
+            {
+              "spanish": "el ingeniero",
+              "polish": "inżynier"
+            },
+            {
+              "spanish": "la ingeniera",
+              "polish": "inżynierka"
+            },
+            {
+              "spanish": "un ingeniero",
+              "polish": "jakiś inżynier"
+            },
+            {
+              "spanish": "una ingeniera",
+              "polish": "jakaś inżynierka"
+            },
+            {
+              "spanish": "los ingenieros",
+              "polish": "inżynierowie"
+            },
+            {
+              "spanish": "las ingenieras",
+              "polish": "inżynierki"
+            },
+            {
+              "spanish": "unos ingenieros",
+              "polish": "jacyś inżynierowie"
+            },
+            {
+              "spanish": "unas ingenieras",
+              "polish": "jakieś inżynierki"
+            },
+
+            {
+              "spanish": "el médico",
+              "polish": "lekarz"
+            },
+            {
+              "spanish": "la médica",
+              "polish": "lekarka"
+            },
+            {
+              "spanish": "un médico",
+              "polish": "jakiś lekarz"
+            },
+            {
+              "spanish": "una médica",
+              "polish": "jakaś lekarka"
+            },
+            {
+              "spanish": "los médicos",
+              "polish": "lekarze"
+            },
+            {
+              "spanish": "las médicas",
+              "polish": "lekarki"
+            },
+            {
+              "spanish": "unos médicos",
+              "polish": "jacyś lekarze"
+            },
+            {
+              "spanish": "unas médicas",
+              "polish": "jakieś lekarki"
+            },
+
+            {
+              "spanish": "el secretario",
+              "polish": "sekretarz"
+            },
+            {
+              "spanish": "la secretaria",
+              "polish": "sekretarka"
+            },
+            {
+              "spanish": "un secretario",
+              "polish": "jakiś sekretarz"
+            },
+            {
+              "spanish": "una secretaria",
+              "polish": "jakaś sekretarka"
+            },
+            {
+              "spanish": "los secretarios",
+              "polish": "sekretarze"
+            },
+            {
+              "spanish": "las secretarias",
+              "polish": "sekretarki"
+            },
+            {
+              "spanish": "unos secretarios",
+              "polish": "jacyś sekretarze"
+            },
+            {
+              "spanish": "unas secretarias",
+              "polish": "jakieś sekretarki"
+            },
+
+            {
+              "spanish": "el periodista",
+              "polish": "dziennikarz"
+            },
+            {
+              "spanish": "la periodista",
+              "polish": "dziennikarka"
+            },
+            {
+              "spanish": "los periodistas",
+              "polish": "dziennikarze"
+            },
+            {
+              "spanish": "las periodistas",
+              "polish": "dziennikarki"
+            },
+
+            {
+              "spanish": "el arquitecto",
+              "polish": "architekt"
+            },
+            {
+              "spanish": "la arquitecta",
+              "polish": "architektka"
+            },
+            {
+              "spanish": "los arquitectos",
+              "polish": "architekci"
+            },
+            {
+              "spanish": "las arquitectas",
+              "polish": "architektki"
+            },
+
+            {
+              "spanish": "el informático",
+              "polish": "informatyk"
+            },
+            {
+              "spanish": "los informáticos",
+              "polish": "informatycy"
+            },
+            {
+              "spanish": "un informático",
+              "polish": "jakiś informatyk"
+            },
+            {
+              "spanish": "unos informáticos",
+              "polish": "jacyś informatycy"
+            },
+
+            {
+              "spanish": "la administrativa",
+              "polish": "pracownica biurowa"
+            },
+            {
+              "spanish": "las administrativas",
+              "polish": "pracownice biurowe"
+            },
+            {
+              "spanish": "una administrativa",
+              "polish": "jakaś pracownica biurowa"
+            },
+            {
+              "spanish": "unas administrativas",
+              "polish": "jakieś pracownice biurowe"
+            },
+
+            {
+              "spanish": "el agente",
+              "polish": "agent"
+            },
+            {
+              "spanish": "la agente",
+              "polish": "agentka"
+            },
+            {
+              "spanish": "los agentes",
+              "polish": "agenci"
+            },
+            {
+              "spanish": "las agentes",
+              "polish": "agentki"
+            },
+
+            {
+              "spanish": "el programador",
+              "polish": "programista"
+            },
+            {
+              "spanish": "la programadora",
+              "polish": "programistka"
+            },
+            {
+              "spanish": "los programadores",
+              "polish": "programiści"
+            },
+            {
+              "spanish": "las programadoras",
+              "polish": "programistki"
+            },
+
+            {
+              "spanish": "el asesor",
+              "polish": "doradca"
+            },
+            {
+              "spanish": "la asesora",
+              "polish": "doradczyni"
+            },
+            {
+              "spanish": "los asesores",
+              "polish": "doradcy"
+            },
+            {
+              "spanish": "las asesoras",
+              "polish": "doradczynie"
+            },
+
+            {
+              "spanish": "el telefonista",
+              "polish": "telefonista"
+            },
+            {
+              "spanish": "la telefonista",
+              "polish": "telefonistka"
+            },
+            {
+              "spanish": "los telefonistas",
+              "polish": "telefoniści"
+            },
+            {
+              "spanish": "las telefonistas",
+              "polish": "telefonistki"
+            }
+          ]
         }
+
+
 
 
 
